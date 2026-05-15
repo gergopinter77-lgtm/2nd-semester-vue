@@ -11,7 +11,7 @@
       <div class="mt-66">
         <CardsPart />
       </div>
-      <AboutPart />
+        <AboutPart />
     </div>
   </main>
 </template>
