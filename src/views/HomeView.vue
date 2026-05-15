@@ -4,6 +4,7 @@
   import AboutPart from '@/components/AboutPart.vue';
   import NewsEvent from '@/components/NewsEvent.vue';
   import MediaPart from '@/components/MediaPart.vue';
+  import TestimonialPart from '@/components/TestimonialPart.vue';
 </script>
 
 <template>
@@ -17,7 +18,10 @@
         <NewsEvent />
        <div class="mt-20">
         <MediaPart />
-      </div> 
+      </div>
+    </div>
+    <div class="my-10">
+        <TestimonialPart />
     </div>
   </main>
 </template>

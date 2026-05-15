@@ -4,8 +4,8 @@ import './assets/logo1.svg'
 </script>
 
 <template>  
-  <div class="bg-white min-h-screen">
-    <header class="w-full sticky z-50 top-0">
+  <div class="bg-white min-h-screen overflow-x-hidden">
+    <header class="w-full">
       <div class="grid grid-cols-3 items-center gap-2.5 w-full px-20">
         <div class="flex justify-start items-center">
           <img class="w-70 h-20 pr-30 pb-1" src="@/assets/logo1.svg" alt="Logo">
@@ -41,6 +41,8 @@ import './assets/logo1.svg'
     </header>
 
     <RouterView />
+
+    <footer class="bg-blue w-screen h-83.25"></footer>
   </div>
 </template>
 
