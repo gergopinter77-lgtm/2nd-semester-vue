@@ -4,7 +4,8 @@
   </div>
 
   <div class="px-20 mt-66 grid grid-cols-12 gap-2.5 rounded-2xl px-9 py-8.75 flex flex-col justify-between">
-    <h2 class="col-start-1 col-span-9 text-4xl font-bold text-blue font-[raleway]">EVENTS</h2>
+    <h2 class="col-start-1 text-4xl font-bold text-blue font-[raleway]">EVENTS</h2>
+    <h3 class="col-end-11 text-2xl font-medium text-blue font-[raleway]">Filter</h3>
 
   </div>
 </template>
