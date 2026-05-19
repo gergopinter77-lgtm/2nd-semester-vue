@@ -24,7 +24,7 @@ export const useCards = () => {
             number: 40,
             text2: "New users",
             button: "Find out more",
-            route: "/users",
+            route: "/network",
         },
         {
             id: 4,
