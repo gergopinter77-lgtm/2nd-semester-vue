@@ -6,7 +6,7 @@
                 <h4 class="text-orange text-6xl font-semibold">{{ card.number }}</h4>
                 <div class="felx flex-col ml-2.5 place-items-center">
                     <p class="text-white text-sm mb-3 font-[raleway]">{{ card.text2 }}</p>
-                    <RouterLink class="text-white bg-orange py-3 px-3.25 text-xs rounded-lg font-[raleway] uppercase">{{ card.button }}</RouterLink>
+                    <RouterLink :to="card.route" class="text-white bg-orange py-3 px-3.25 text-xs rounded-lg font-[raleway] uppercase">{{ card.button }}</RouterLink>
                 </div>
             </div>
         </div>
