@@ -26,7 +26,12 @@ const router = createRouter({
       path: '/network',
       name: 'network',
       component: () => import('../views/NetworkView.vue'),
-    }
+    },
+    {
+      path: '/news',
+      name: 'news',
+      component: () => import('../views/NewsView.vue'),
+    },
   ],
 })
 
