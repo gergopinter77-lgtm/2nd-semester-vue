@@ -26,7 +26,13 @@ const router = createRouter({
       path: '/network',
       name: 'network',
       component: () => import('../views/NetworkView.vue'),
+    },
+    {
+      path: '/media',
+      name: 'media',
+      component: () => import('../views/MediaView.vue'),
     }
+
   ],
 })
 

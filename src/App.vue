@@ -16,6 +16,7 @@ import './assets/logo1.svg'
             <RouterLink class="pr-9 text-blue hover:text-orange text-lg font-[Raleway]" to="/about">NEWS</RouterLink>
             <RouterLink class="pr-9 text-blue hover:text-orange text-lg font-[Raleway]" to="/events">EVENTS</RouterLink>
             <RouterLink class="pr-9 text-blue hover:text-orange text-lg font-[Raleway]" to="/network">NETWORK</RouterLink>
+            <RouterLink class="pr-9 text-blue hover:text-orange text-lg font-[Raleway]" to="/media">MEDIA</RouterLink>
           </nav>
         </div>
           <div class="flex justify-end items-center">
