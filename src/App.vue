@@ -13,7 +13,7 @@ import './assets/logo1.svg'
         <div class="flex justify-center py-13.25 items-center">
           <nav>
             <RouterLink class="pr-9 text-blue hover:text-orange text-lg font-[Raleway]" to="/">HOME</RouterLink>
-            <RouterLink class="pr-9 text-blue hover:text-orange text-lg font-[Raleway]" to="/about">NEWS</RouterLink>
+            <RouterLink class="pr-9 text-blue hover:text-orange text-lg font-[Raleway]" to="/news">NEWS</RouterLink>
             <RouterLink class="pr-9 text-blue hover:text-orange text-lg font-[Raleway]" to="/events">EVENTS</RouterLink>
             <RouterLink class="pr-9 text-blue hover:text-orange text-lg font-[Raleway]" to="/network">NETWORK</RouterLink>
             <RouterLink class="pr-9 text-blue hover:text-orange text-lg font-[Raleway]" to="/media">MEDIA</RouterLink>
