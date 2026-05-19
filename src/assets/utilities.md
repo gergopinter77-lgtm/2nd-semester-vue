@@ -12,3 +12,11 @@
 
 ## star 
 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path fill="#ea791e" d="m5.825 21l1.625-7.025L2 9.25l7.2-.625L12 2l2.8 6.625l7.2.625l-5.45 4.725L18.175 21L12 17.275z"/></svg>
+
+## flag-dk
+
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 37 28"><path fill="#c8102e" d="M0 0h37v28H0z"/><path fill="#ffffff" d="M12 0h4v28h-4z"/><path fill="#ffffff" d="M0 12h37v4H0z"/></svg>
+
+## flag-de
+
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="12" viewBox="0 0 5 3"><path fill="#000000" d="M0 0h5v1H0z"/><path fill="#dd0000" d="M0 1h5v1H0z"/><path fill="#ffce00" d="M0 2h5v1H0z"/></svg>

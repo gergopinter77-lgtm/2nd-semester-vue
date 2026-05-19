@@ -25,7 +25,10 @@
             <img :src="member.image" :alt="member.name" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-blue/60"></div>
 
-            <p class="absolute top-3 right-3 text-2xl">{{ member.country === 'DK' ? '🇩🇰' : '🇩🇪' }}</p>
+            <div class="absolute top-3 right-3">
+    <svg v-if="member.country === 'DK'" xmlns="http://www.w3.org/2000/svg" width="28" height="20" viewBox="0 0 37 28"><path fill="#c8102e" d="M0 0h37v28H0z"/><path fill="#ffffff" d="M12 0h4v28h-4z"/><path fill="#ffffff" d="M0 12h37v4H0z"/></svg>
+    <svg v-else xmlns="http://www.w3.org/2000/svg" width="28" height="17" viewBox="0 0 5 3"><path fill="#000000" d="M0 0h5v1H0z"/><path fill="#dd0000" d="M0 1h5v1H0z"/><path fill="#ffce00" d="M0 2h5v1H0z"/></svg>
+</div>
 
             <div class="absolute bottom-0 left-0 right-0 p-5 text-white font-[raleway]">
                 <h3 class="text-xl font-bold mb-1">{{ member.name }}</h3>
