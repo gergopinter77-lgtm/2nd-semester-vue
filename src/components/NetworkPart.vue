@@ -5,7 +5,7 @@
     </div>
 
     <div class="grid grid-cols-12 gap-2.5 mt-20 items-center">
-        <h2 class="col-start-1 col-span-3 text-4xl font-bold text-blue font-[raleway]"><span class="text-orange">N</span>etwork</h2>
+        <h2 class="col-start-1 col-span-3 text-4xl font-bold text-blue font-[raleway]">NETWORK</h2>
 
         <div class="col-end-13 col-span-9 flex flex-row justify-end gap-3">
             <button @click="selectedCountry = 'all'" class="px-5 py-2 rounded-lg border border-blue font-[raleway]" :class="selectedCountry === 'all' ? 'bg-blue text-white' : 'text-blue'">
