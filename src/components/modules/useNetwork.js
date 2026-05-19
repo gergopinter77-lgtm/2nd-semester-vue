@@ -4,185 +4,341 @@ export const useNetwork = () => {
     const members = ref([
         {
             id: 1,
+            slug: "agentur-fur-arbeit-flensburg",
             name: "Agentur für Arbeit Flensburg",
             description: "Public employment agency for the Flensburg region.",
+            descriptionLong: "Agentur für Arbeit Flensburg is the public employment agency serving the Flensburg region. We support both jobseekers and employers with recruitment, training, and labour market consulting across Northern Germany.",
             country: "DE",
-            image: "https://imgur.com/9IXPg5L.jpeg"
+            image: "https://imgur.com/9IXPg5L.jpeg",
+            website: "www.arbeitsagentur.de",
+            phone: "+49 461 8190",
+            address: "Waldemar-Petersen-Straße 3, 24943 Flensburg",
+            email: "flensburg@arbeitsagentur.de"
         },
         {
             id: 2,
+            slug: "bundesagentur-fur-arbeit",
             name: "Bundesagentur für Arbeit",
             description: "German federal employment agency supporting jobseekers and employers.",
+            descriptionLong: "Bundesagentur für Arbeit is Germany's federal employment authority, supporting jobseekers and employers across the country. We provide labour market analysis, recruitment services, and integration programs nationwide.",
             country: "DE",
-            image: "https://imgur.com/gVVRTN7.jpeg"
+            image: "https://imgur.com/gVVRTN7.jpeg",
+            website: "www.arbeitsagentur.de",
+            phone: "+49 911 1790",
+            address: "Regensburger Straße 104, 90478 Nürnberg",
+            email: "zentrale@arbeitsagentur.de"
         },
         {
             id: 3,
+            slug: "business-aabenraa",
             name: "Business Aabenraa",
             description: "Business council supporting companies and growth in Aabenraa.",
+            descriptionLong: "Business Aabenraa is the official business council for Aabenraa Municipality, supporting local companies with growth strategies, networking, and access to international markets across the Danish-German cross-border region.",
             country: "DK",
-            image: "https://imgur.com/kQLqblw.jpeg"
+            image: "https://imgur.com/kQLqblw.jpeg",
+            website: "www.businessaabenraa.dk",
+            phone: "+45 73 76 76 76",
+            address: "Skelbækvej 2, 6200 Aabenraa",
+            email: "info@businessaabenraa.dk"
         },
         {
             id: 4,
+            slug: "business-esbjerg",
             name: "Business Esbjerg",
             description: "Business council supporting companies and growth in Esbjerg.",
+            descriptionLong: "Business Esbjerg is the official business council for Esbjerg Municipality, supporting local companies with growth strategies, networking, and international expansion. We connect businesses across Denmark's leading energy hub and the Danish-German cross-border region.",
             country: "DK",
-            image: "https://imgur.com/IDfDBmc.jpeg"
+            image: "https://imgur.com/IDfDBmc.jpeg",
+            website: "www.businessesbjerg.com",
+            phone: "+45 71 31 19 09",
+            address: "Gronnegade 21, 6700 Esbjerg",
+            email: "info@businessesbjerg.dk"
         },
         {
             id: 5,
+            slug: "business-kolding",
             name: "Business Kolding",
             description: "Business council supporting companies and growth in Kolding.",
+            descriptionLong: "Business Kolding is the official business council for Kolding Municipality, helping companies with entrepreneurship, design innovation, and cross-border collaboration across Southern Denmark and Northern Germany.",
             country: "DK",
-            image: "https://imgur.com/ALgvHRT.jpeg"
+            image: "https://imgur.com/ALgvHRT.jpeg",
+            website: "www.businesskolding.dk",
+            phone: "+45 76 30 06 90",
+            address: "Akseltorv 1, 6000 Kolding",
+            email: "info@businesskolding.dk"
         },
         {
             id: 6,
+            slug: "copenhagen-capacity",
             name: "Copenhagen Capacity",
             description: "Investment promotion agency attracting companies and talent to Greater Copenhagen.",
+            descriptionLong: "Copenhagen Capacity is the official investment promotion agency for Greater Copenhagen, attracting foreign companies and international talent to establish themselves in the Danish capital region.",
             country: "DK",
-            image: "https://imgur.com/MoBQJh7.jpeg"
+            image: "https://imgur.com/MoBQJh7.jpeg",
+            website: "www.copcap.com",
+            phone: "+45 33 22 02 22",
+            address: "Nørregade 7B, 1165 København K",
+            email: "info@copcap.com"
         },
         {
             id: 7,
+            slug: "di-dansk-industri-deutschland",
             name: "DI – Dansk Industri Deutschland",
             description: "The German branch of the Confederation of Danish Industry.",
+            descriptionLong: "DI – Dansk Industri Deutschland is the German office of the Confederation of Danish Industry, supporting Danish companies looking to enter, grow, or operate in the German market.",
             country: "DE",
-            image: "https://imgur.com/ZA9ssRs.jpeg"
+            image: "https://imgur.com/ZA9ssRs.jpeg",
+            website: "www.danskindustri.de",
+            phone: "+49 30 5900 9970",
+            address: "Reinhardtstraße 32, 10117 Berlin",
+            email: "berlin@di.dk"
         },
         {
             id: 8,
+            slug: "foreningen-sonderborg-vaekstrad",
             name: "Foreningen Sønderborg Vækstråd",
             description: "Growth council supporting companies in Sønderborg Municipality.",
+            descriptionLong: "Foreningen Sønderborg Vækstråd is the growth council for Sønderborg Municipality, supporting local companies with consulting, networking, and regional development across Southern Denmark.",
             country: "DK",
-            image: "https://imgur.com/zyXtkSe.jpeg"
+            image: "https://imgur.com/zyXtkSe.jpeg",
+            website: "www.sonderborgvaekstraad.dk",
+            phone: "+45 88 72 50 00",
+            address: "Rådhustorvet 10, 6400 Sønderborg",
+            email: "info@sonderborgvaekstraad.dk"
         },
         {
             id: 9,
+            slug: "hansebelt-ev",
             name: "HanseBelt e.V.",
             description: "German business network promoting Danish-German cooperation in the Fehmarnbelt region.",
+            descriptionLong: "HanseBelt e.V. is a German business association promoting cross-border cooperation in the Fehmarnbelt region. We bring together companies from Northern Germany and Denmark to develop the area around the future Fehmarn tunnel.",
             country: "DE",
-            image: "https://imgur.com/gMF7sdX.jpeg"
+            image: "https://imgur.com/gMF7sdX.jpeg",
+            website: "www.hansebelt.de",
+            phone: "+49 451 7060140",
+            address: "Falkenstraße 11, 23564 Lübeck",
+            email: "info@hansebelt.de"
         },
         {
             id: 10,
+            slug: "jackstadt-zentrum-flensburg",
             name: "Jackstädt-Zentrum Flensburg",
             description: "Entrepreneurship and innovation centre at Hochschule Flensburg.",
+            descriptionLong: "Jackstädt-Zentrum Flensburg is the entrepreneurship and innovation centre at Hochschule Flensburg. We support startups, students, and entrepreneurs with workshops, mentoring, and cross-border opportunities.",
             country: "DE",
-            image: "https://imgur.com/J8U8ARC.jpeg"
+            image: "https://imgur.com/J8U8ARC.jpeg",
+            website: "www.jackstaedt-zentrum.de",
+            phone: "+49 461 805 1542",
+            address: "Kanzleistraße 91-93, 24943 Flensburg",
+            email: "info@jackstaedt-zentrum.de"
         },
         {
             id: 11,
+            slug: "ihk-zu-flensburg",
             name: "Industrie- und Handelskammer zu Flensburg",
             description: "Chamber of industry and commerce supporting businesses in Schleswig-Holstein.",
+            descriptionLong: "Industrie- und Handelskammer zu Flensburg is the chamber of industry and commerce serving businesses in the Flensburg region of Schleswig-Holstein, offering training, certifications, and business advocacy.",
             country: "DE",
-            image: "https://imgur.com/yUF5Gpa.jpeg"
+            image: "https://imgur.com/yUF5Gpa.jpeg",
+            website: "www.ihk-flensburg.de",
+            phone: "+49 461 806 0",
+            address: "Heinrichstraße 28-34, 24937 Flensburg",
+            email: "info@flensburg.ihk.de"
         },
         {
             id: 12,
+            slug: "kielregion-gmbh",
             name: "KielRegion GmbH",
             description: "Regional development organisation for the Kiel area in Schleswig-Holstein.",
+            descriptionLong: "KielRegion GmbH is the regional development organisation for the Kiel area, working on economic development, mobility, and regional marketing across Kiel, Plön, and Rendsburg-Eckernförde.",
             country: "DE",
-            image: "https://imgur.com/Bgy8NSd.jpeg"
+            image: "https://imgur.com/Bgy8NSd.jpeg",
+            website: "www.kielregion.de",
+            phone: "+49 431 5306 600",
+            address: "Hopfenstraße 30, 24103 Kiel",
+            email: "info@kielregion.de"
         },
         {
             id: 13,
+            slug: "region-syddanmark",
             name: "Region Syddanmark",
             description: "Danish regional authority driving development in Southern Denmark.",
+            descriptionLong: "Region Syddanmark is one of Denmark's five administrative regions, covering Southern Denmark. We drive regional development, healthcare, and cross-border cooperation in the Danish-German border region.",
             country: "DK",
-            image: "https://imgur.com/Kdop213.jpeg"
+            image: "https://imgur.com/Kdop213.jpeg",
+            website: "www.regionsyddanmark.dk",
+            phone: "+45 76 63 10 00",
+            address: "Damhaven 12, 7100 Vejle",
+            email: "kontakt@rsyd.dk"
         },
         {
             id: 14,
+            slug: "regionaldirektion-nord",
             name: "Regionaldirektion Nord",
             description: "German federal employment authority for Northern Germany.",
+            descriptionLong: "Regionaldirektion Nord is the northern regional directorate of the German Federal Employment Agency, covering labour market policy for Schleswig-Holstein, Hamburg, and Mecklenburg-Vorpommern.",
             country: "DE",
-            image: "https://imgur.com/mTC5qNl.jpeg"
+            image: "https://imgur.com/mTC5qNl.jpeg",
+            website: "www.arbeitsagentur.de/vor-ort/rd-n",
+            phone: "+49 431 709 0",
+            address: "Projensdorfer Straße 82, 24106 Kiel",
+            email: "kiel.rd-n@arbeitsagentur.de"
         },
         {
             id: 15,
+            slug: "erhvervshus-sydjylland",
             name: "S/I Erhvervshus Sydjylland",
             description: "Business hub supporting companies across Southern Jutland.",
+            descriptionLong: "S/I Erhvervshus Sydjylland is a business hub serving companies across Southern Jutland with consulting, funding access, and growth programs.",
             country: "DK",
-            image: "https://imgur.com/QhU9npS.jpeg"
+            image: "https://imgur.com/QhU9npS.jpeg",
+            website: "www.ehsj.dk",
+            phone: "+45 70 22 00 76",
+            address: "Bautavej 1A, 6705 Esbjerg Ø",
+            email: "info@ehsj.dk"
         },
         {
             id: 16,
+            slug: "tonder-erhvervsrad",
             name: "Tønder Erhvervsråd",
             description: "Business council supporting companies and entrepreneurs in Tønder.",
+            descriptionLong: "Tønder Erhvervsråd is the business council for Tønder Municipality, supporting companies and entrepreneurs in Denmark's southernmost cross-border region.",
             country: "DK",
-            image: "https://imgur.com/0GOAs4b.jpeg"
+            image: "https://imgur.com/0GOAs4b.jpeg",
+            website: "www.tondererhvervsraad.dk",
+            phone: "+45 74 92 92 92",
+            address: "Vestergade 9, 6270 Tønder",
+            email: "info@tondererhvervsraad.dk"
         },
         {
             id: 17,
+            slug: "trekantomradet-danmark",
             name: "Trekantområdet Danmark",
             description: "Regional partnership of seven municipalities in the Triangle Region.",
+            descriptionLong: "Trekantområdet Danmark is the regional partnership of seven municipalities forming Denmark's Triangle Region, coordinating business development and infrastructure projects.",
             country: "DK",
-            image: "https://imgur.com/LFQs9Rt.jpeg"
+            image: "https://imgur.com/LFQs9Rt.jpeg",
+            website: "www.trekantomraadet.dk",
+            phone: "+45 79 79 79 79",
+            address: "Kolding Åpark 1, 6000 Kolding",
+            email: "info@trekantomraadet.dk"
         },
         {
             id: 18,
+            slug: "udviklingsrad-sonderjylland",
             name: "Udviklingsråd Sønderjylland",
             description: "Development council for the Sønderjylland region.",
+            descriptionLong: "Udviklingsråd Sønderjylland coordinates development initiatives across the Sønderjylland region, focusing on cross-border collaboration with Schleswig-Holstein.",
             country: "DK",
-            image: "https://imgur.com/oXZgb4r.jpeg"
+            image: "https://imgur.com/oXZgb4r.jpeg",
+            website: "www.udviklingsraadsonderjylland.dk",
+            phone: "+45 74 36 80 00",
+            address: "Storegade 17, 6200 Aabenraa",
+            email: "info@urs.dk"
         },
         {
             id: 19,
+            slug: "udviklingsrad-vejen",
             name: "Udviklingsråd Vejen",
             description: "Development council for Vejen Municipality.",
+            descriptionLong: "Udviklingsråd Vejen is the development council for Vejen Municipality, supporting local business growth and community development in Southern Denmark.",
             country: "DK",
-            image: "https://imgur.com/bYugwXa.jpeg"
+            image: "https://imgur.com/bYugwXa.jpeg",
+            website: "www.urvejen.dk",
+            phone: "+45 79 96 50 00",
+            address: "Rådhuspassagen 3, 6600 Vejen",
+            email: "info@urvejen.dk"
         },
         {
             id: 20,
+            slug: "unternehmensverband-unterelbe-westkuste",
             name: "Unternehmensverband Unterelbe-Westküste e.V.",
             description: "Business association for the Unterelbe-Westküste region in Germany.",
+            descriptionLong: "Unternehmensverband Unterelbe-Westküste e.V. is a business association representing companies in the Unterelbe-Westküste region, advocating for industry and regional development.",
             country: "DE",
-            image: "https://imgur.com/fe454om.jpeg"
+            image: "https://imgur.com/fe454om.jpeg",
+            website: "www.uvnord.de",
+            phone: "+49 4121 4798 0",
+            address: "Reichenstraße 23, 25335 Elmshorn",
+            email: "info@uvnord.de"
         },
         {
             id: 21,
+            slug: "wfg-flensburg-schleswig",
             name: "WFG Flensburg/Schleswig",
             description: "Economic development agency for Flensburg and Schleswig.",
+            descriptionLong: "WFG Flensburg/Schleswig is the economic development agency for Flensburg and Schleswig, attracting investment and supporting companies in the Northern Schleswig-Holstein region.",
             country: "DE",
-            image: "https://imgur.com/ntybdEK.jpeg"
+            image: "https://imgur.com/ntybdEK.jpeg",
+            website: "www.wfg-fl.de",
+            phone: "+49 461 8082 0",
+            address: "Lilienthalstraße 1, 24941 Flensburg",
+            email: "info@wfg-fl.de"
         },
         {
             id: 22,
+            slug: "wfg-rendsburg-eckernforde",
             name: "WFG Rendsburg-Eckernförde",
             description: "Economic development agency for the Rendsburg-Eckernförde district.",
+            descriptionLong: "WFG Rendsburg-Eckernförde is the economic development agency for the Rendsburg-Eckernförde district, promoting investment and business growth in central Schleswig-Holstein.",
             country: "DE",
-            image: "https://imgur.com/oBfNsNH.jpeg"
+            image: "https://imgur.com/oBfNsNH.jpeg",
+            website: "www.wfg-rd.de",
+            phone: "+49 4331 1377 0",
+            address: "T-Damm 33, 24768 Rendsburg",
+            email: "info@wfg-rd.de"
         },
         {
             id: 23,
+            slug: "wfg-nordfriesland",
             name: "WFG Nordfriesland",
             description: "Economic development agency for the Nordfriesland district.",
+            descriptionLong: "WFG Nordfriesland is the economic development agency for the Nordfriesland district, supporting companies and attracting investment across Germany's northernmost coastal region.",
             country: "DE",
-            image: "https://imgur.com/FuFhNtW.jpeg"
+            image: "https://imgur.com/FuFhNtW.jpeg",
+            website: "www.wfg-nf.de",
+            phone: "+49 4841 89 78 0",
+            address: "Damm 14, 25813 Husum",
+            email: "info@wfg-nf.de"
         },
         {
             id: 24,
+            slug: "wirtschaftsvereinigung-eutin",
             name: "Wirtschaftsvereinigung Eutin e.V.",
             description: "Business association supporting companies in Eutin.",
+            descriptionLong: "Wirtschaftsvereinigung Eutin e.V. is a business association supporting companies and entrepreneurs in Eutin and the surrounding Ostholstein region.",
             country: "DE",
-            image: "https://imgur.com/aIRO9LU.jpeg"
+            image: "https://imgur.com/aIRO9LU.jpeg",
+            website: "www.wv-eutin.de",
+            phone: "+49 4521 70 99 0",
+            address: "Markt 1, 23701 Eutin",
+            email: "info@wv-eutin.de"
         },
         {
             id: 25,
+            slug: "work-live-stay",
             name: "Work-live-stay",
             description: "Network attracting and retaining international talent in Southern Denmark.",
+            descriptionLong: "Work-live-stay is a network focused on attracting and retaining international talent in Southern Denmark, working with companies, municipalities, and educational institutions across the region.",
             country: "DK",
-            image: "https://imgur.com/ajXg2Dk.jpeg"
+            image: "https://imgur.com/ajXg2Dk.jpeg",
+            website: "www.worklivestay.dk",
+            phone: "+45 65 50 22 00",
+            address: "Campusvej 55, 5230 Odense M",
+            email: "info@worklivestay.dk"
         },
         {
             id: 26,
+            slug: "workindenmark-south",
             name: "Workindenmark South",
             description: "Public service helping international workers find jobs in Denmark.",
+            descriptionLong: "Workindenmark South is the regional office of Denmark's public service helping international workers find jobs in the country and supporting Danish employers with international recruitment.",
             country: "DK",
-            image: "https://imgur.com/5spOyjw.jpeg"
+            image: "https://imgur.com/5spOyjw.jpeg",
+            website: "www.workindenmark.dk",
+            phone: "+45 72 22 33 00",
+            address: "Dannebrogsgade 3, 5000 Odense C",
+            email: "south@workindenmark.dk"
         }
     ])
 
