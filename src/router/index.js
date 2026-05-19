@@ -28,6 +28,11 @@ const router = createRouter({
       component: () => import('../views/NetworkView.vue'),
     },
     {
+      path: '/network/:slug',
+      name: 'member',
+      component: () => import('../views/MemberView.vue'),
+    },
+    {
       path: '/media',
       name: 'media',
       component: () => import('../views/MediaView.vue'),
