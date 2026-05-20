@@ -6,7 +6,7 @@
     </h3>
 
     <div class="grid grid-cols-4 gap-2.5 mt-10 mb-5">
-      <div v-for="media in medias" :key="media.id" class="col-span-1">
+      <div v-for="media in medias" :key="media.id" class="col-span-1 ">
         <img :src="media.pictures" alt="" class="h-68.25 w-full object-cover rounded-xl">
       </div>
     </div>
