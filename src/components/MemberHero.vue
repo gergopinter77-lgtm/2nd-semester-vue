@@ -1,6 +1,6 @@
 <template>
     <div class="pt-10">
-        <RouterLink to="/network" class="text-blue font-[raleway]">‹ Network</RouterLink>
+        <RouterLink to="/network" class="text-blue font-[raleway] hover:text-orange">‹ Network</RouterLink>
 
         <h1 class="text-6xl text-blue font-semibold font-[raleway] mt-4">
             <span class="text-orange">{{ member.name.charAt(0) }}</span>{{ member.name.slice(1) }}
