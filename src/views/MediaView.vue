@@ -12,7 +12,7 @@ import NewsLetterPart from '@/components/NewsLetterPart.vue';
     <div>
         <MediaChanelPart /> 
     </div>
-    <div>
+    <div class="my-10">
         <NewsLetterPart />
     </div>
     <div class="my-10">

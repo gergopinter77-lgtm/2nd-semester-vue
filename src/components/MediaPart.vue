@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col gap-4">
-    <h3 class="text-black font-[raleway] font-semibold text-4xl">
+    <h3 class="text-blue font-[raleway] font-semibold text-4xl">
       <span class="text-orange">S</span>ome memories of our previous <br>
       events
     </h3>

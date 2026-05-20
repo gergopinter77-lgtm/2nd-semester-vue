@@ -8,7 +8,7 @@
                 v-for="(item, i) in items"
                 :key="i"
                 class="py-3 cursor-pointer text-lg transition-colors duration-200"
-                :class="[activeIndex === i ? 'text-orange font-base' : 'text-gray-900 hover:text-[#f2845a]']"
+                :class="[activeIndex === i ? 'text-orange font-base' : 'text-blue hover:text-[#f2845a]']"
                 @click="activeIndex = i"
                 >
                 {{ item.label }}
@@ -20,8 +20,8 @@
             <div class="pl-10 min-h-48">
                 <Transition name="fade" mode="out-in">
                 <div :key="activeIndex">
-                    <p class="font-[raleway] text-2xl font-bold mb-4">{{ active.title }}</p>
-                    <p class="text-md leading-7 text-gray-500 font-light">{{ active.body }}</p>
+                    <p class="font-[raleway] text-2xl font-bold mb-4 text-blue">{{ active.title }}</p>
+                    <p class="text-md leading-7 text-blue/50 font-light">{{ active.body }}</p>
                 </div>
                 </Transition>
             </div>
