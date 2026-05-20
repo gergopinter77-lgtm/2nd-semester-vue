@@ -4,6 +4,7 @@
   import { useNetwork } from '@/components/modules/useNetwork'
   import MemberHero from '@/components/MemberHero.vue';
   import MemberInfo from '@/components/MemberInfo.vue';
+  import NewsLetterPart from '@/components/NewsLetterPart.vue';
 
   const route = useRoute()
   const { members } = useNetwork()
@@ -19,6 +20,9 @@
       <MemberHero :member="member" />
       <MemberInfo :member="member" />
     </div>
+    <div class="my-20">
+     <NewsLetterPart />
+   </div>
   </main>
 
   <main v-else class="px-20 pt-20">
