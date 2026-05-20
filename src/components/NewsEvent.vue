@@ -5,7 +5,10 @@
         </div>
         <div v-for="news in newses" :key="news" class="col-span-3 rounded-lg h-125 row-2">
             <div class="flex flex-col">
-                <img :src="news.image" alt="" class="w-full h-125 object-cover rounded-lg grayscale-80 text-white">
+                <div class="relative">
+                    <img :src="news.image" alt="" class="w-full h-125 object-cover rounded-lg text-white">
+                    <div class="absolute inset-0 bg-blue/60"></div>
+                </div>
                 <RouterLink to="/news" class="absolute -bottom-355 pl-7 text-[32px]/9 font-[raleway] font-semibold mb-2 w-65 text-white text-shadow-lg hover:text-orange duration-75"><span class="text-orange">{{ news.text[0] }}</span>{{ news.text.slice(1) }}</RouterLink>
             </div>
         </div>

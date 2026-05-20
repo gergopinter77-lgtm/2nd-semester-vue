@@ -2,6 +2,7 @@
 import NewsheroPart from '@/components/NewsheroPart.vue';
 import NewsfilterPart from '@/components/NewsfilterPart.vue';
 import NewsCards from '@/components/NewsCards.vue';
+import TestimonialPart from '@/components/TestimonialPart.vue';
 </script>
 
 <template>
@@ -12,6 +13,9 @@ import NewsCards from '@/components/NewsCards.vue';
         <NewsfilterPart />
       </div>
       <NewsCards />
+    </div>
+    <div class="my-20">
+      <TestimonialPart />
     </div>
   </main>
 </template>

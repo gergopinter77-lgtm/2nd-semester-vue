@@ -8,7 +8,7 @@
                 v-for="(item, i) in items"
                 :key="i"
                 class="py-3 cursor-pointer text-lg transition-colors duration-200"
-                :class="[activeIndex === i ? 'text-[#e8622a] font-base' : 'text-gray-900 hover:text-[#f2845a]']"
+                :class="[activeIndex === i ? 'text-orange font-base' : 'text-gray-900 hover:text-[#f2845a]']"
                 @click="activeIndex = i"
                 >
                 {{ item.label }}

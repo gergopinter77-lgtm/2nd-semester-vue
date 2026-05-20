@@ -3,7 +3,7 @@ import { ref } from 'vue'
 export const useCategories = () => {
     const categories = ref ([
         { label: 'All',        value: 'all' },
-        { label: 'Technology', value: 'tech' },
+        { label: 'Technology', value: 'technology' },
         { label: 'Business',   value: 'business' },
         { label: 'Politics',   value: 'politics' },
         { label: 'Science',    value: 'science' },
