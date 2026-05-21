@@ -8,7 +8,7 @@
         <h2 class="col-start-1 col-span-3 text-4xl font-bold text-blue font-[raleway]">NETWORK</h2>
 
         <div class="col-end-13 col-span-9 flex flex-row justify-end gap-3">
-            <button @click="selectedCountry = 'all'" class="px-5 py-2 rounded-lg border border-blue font-[raleway] hover:bg-blue& hover:text-white" :class="selectedCountry === 'all' ? 'bg-blue text-white' : 'text-blue'">
+            <button @click="selectedCountry = 'all'" class="px-5 py-2 rounded-lg border border-blue font-[raleway] hover:bg-blue hover:text-white" :class="selectedCountry === 'all' ? 'bg-blue text-white' : 'text-blue'">
                 All
             </button>
             <button @click="selectedCountry = 'DK'" class="px-5 py-2 rounded-lg border border-blue font-[raleway] hover:bg-blue hover:text-white" :class="selectedCountry === 'DK' ? 'bg-blue text-white' : 'text-blue'">
