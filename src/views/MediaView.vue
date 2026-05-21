@@ -1,7 +1,6 @@
 <script setup>
 import MediaChanelPart from '@/components/MediaChanelPart.vue';
 import MediaHeroPart from '@/components/MediaHeroPart.vue';
-import TestimonialPart from '@/components/TestimonialPart.vue';
 import NewsLetterPart from '@/components/NewsLetterPart.vue';
 import MediaNewspart from '@/components/MediaNewspart.vue';
 </script>
@@ -18,9 +17,6 @@ import MediaNewspart from '@/components/MediaNewspart.vue';
     </div>
     <div class="my-10">
         <MediaNewspart />
-    </div>
-    <div class="my-10">
-        <TestimonialPart />
     </div>
 
 </template>
