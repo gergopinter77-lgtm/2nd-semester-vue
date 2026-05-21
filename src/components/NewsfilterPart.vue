@@ -38,7 +38,7 @@
                             class="w-2 h-2 rounded-full bg-white"
                             />
                         </button>
-                        <button @click="clearFilters" class="text-sm pl-16. uppercase text-blue/50 hover:text-blue transition-colors duration-50">
+                        <button @click="clearFilters" class="text-sm pl-16 uppercase text-blue/50 hover:text-blue transition-colors duration-50">
                             Clear all
                         </button>
                     </div>

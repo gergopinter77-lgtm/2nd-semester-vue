@@ -42,6 +42,11 @@ const router = createRouter({
       name: 'news',
       component: () => import('../views/NewsView.vue'),
     },
+    {
+      path: '/news/:slug',
+      name: 'newspage',
+      component: () => import('../views/NewspageView.vue'),
+    },
 
   ],
   scrollBehavior() {
