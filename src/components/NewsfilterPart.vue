@@ -73,14 +73,14 @@
                 class="flex items-center gap-1.5 px-2.5 py-0.5 border border-[#0f2c4a]/30 text-[10px] tracking-widest uppercase text-[#0f2c4a]"
                 >
                 {{ cat }}
-                <button @click="store.searchQuery = ''" class="text-orange/60 hover:text-[#c8922a] leading-none">×</button>
+                <button @click="toggleCategory(cat)" class="text-orange/60 hover:text-[#c8922a] leading-none">×</button>
                 </span>
                 <span
                 v-if="store.searchQuery"
                 class="flex items-center gap-1.5 px-2.5 py-0.5 border border-orange/40 text-[10px] tracking-widest uppercase text-[#c8922a]"
                 >
                 "{{ store.searchQuery }}"
-                <button @click="store.searchQuery = ''; searchQuery = ''" class="text-orange/60 hover:text-[#c8922a] leading-none">×</button>
+                <button class="text-orange/60 hover:text-[#c8922a] leading-none">×</button>
                 </span>
             </div>
             </Transition>
