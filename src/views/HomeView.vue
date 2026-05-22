@@ -11,7 +11,7 @@
   <main>
     <div class="px-20">
       <HeroPart />
-      <div class="mt-66">
+      <div class="mt-16 md:mt-46 sm:mt-26 lg:mt-66">
         <CardsPart />
       </div>
         <AboutPart />
