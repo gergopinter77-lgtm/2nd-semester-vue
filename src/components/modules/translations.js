@@ -1,0 +1,38 @@
+export const translations = {
+    en: {
+        networkTitle: 'Meet our network of 26 partners across the border',
+        networkSubtitle: 'Meet leaders and specialists from across the region. Share experience, build relationships, and put new knowledge to work — across industries and roles.',
+        networkHeading: 'Network',
+        filterAll: 'All',
+        filterDenmark: 'Denmark',
+        filterGermany: 'Germany',
+        moreAbout: 'More about the network',
+        backToNetwork: 'Network',
+        information: 'Information',
+        memberNotFound: 'Member not found',
+    },
+    da: {
+        networkTitle: 'Mød vores netværk af 26 partnere på tværs af grænsen',
+        networkSubtitle: 'Mød ledere og specialister fra hele regionen. Del erfaringer, skab relationer, og bring ny viden i spil — på tværs af brancher og fag.',
+        networkHeading: 'Netværk',
+        filterAll: 'Alle',
+        filterDenmark: 'Danmark',
+        filterGermany: 'Tyskland',
+        moreAbout: 'Læs mere om netværket',
+        backToNetwork: 'Netværk',
+        information: 'Information',
+        memberNotFound: 'Medlem ikke fundet',
+    },
+    de: {
+        networkTitle: 'Lernen Sie unser Netzwerk aus 26 Partnern über die Grenze hinweg kennen',
+        networkSubtitle: 'Treffen Sie Führungskräfte und Spezialisten aus der gesamten Region. Teilen Sie Erfahrungen, knüpfen Sie Beziehungen und bringen Sie neues Wissen ein — über Branchen und Berufe hinweg.',
+        networkHeading: 'Netzwerk',
+        filterAll: 'Alle',
+        filterDenmark: 'Dänemark',
+        filterGermany: 'Deutschland',
+        moreAbout: 'Mehr über das Netzwerk',
+        backToNetwork: 'Netzwerk',
+        information: 'Information',
+        memberNotFound: 'Mitglied nicht gefunden',
+    }
+}

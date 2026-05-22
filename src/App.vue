@@ -1,6 +1,16 @@
 <script setup>
+import { ref } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import './assets/logo1.svg'
+import { useLanguage } from '@/components/modules/useLanguage'
+
+    const { currentLanguage, setLanguage } = useLanguage()
+    const languageOpen = ref(false)
+
+    const chooseLanguage = (lang) => {
+    setLanguage(lang)
+    languageOpen.value = false
+    }
 </script>
 
 <template>  
@@ -20,10 +30,19 @@ import './assets/logo1.svg'
           </nav>
         </div>
           <div class="flex justify-end items-center">
-            <div class="flex items-center border border-blue rounded-lg overflow-hidden">
-              <button class="text-blue hover:text-orange text-sm lg:text-lg font-[Raleway] px-4 lg:px-6 py-1 lg:py-2 border-r border-blue">
-                DK
-              </button>
+            <div class="flex items-center border border-blue rounded-lg">
+              <div class="relative border-r border-blue">
+    <button @click="languageOpen = !languageOpen" class="flex items-center gap-1 text-blue hover:text-orange text-sm lg:text-lg font-[Raleway] px-4 lg:px-6 py-1 lg:py-2 uppercase transition-colors duration-300">
+        {{ currentLanguage }}
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="transition-transform duration-300" :class="languageOpen ? 'rotate-180' : ''"><path fill="currentColor" d="M12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4z"/></svg>
+    </button>
+
+       <div v-if="languageOpen" class="absolute top-full left-0 mt-1 bg-white border border-blue rounded-lg overflow-hidden z-50 w-full">
+        <button @click="chooseLanguage('en')" class="block w-full text-left px-4 py-2 font-[raleway] uppercase hover:bg-blue hover:text-white transition-colors" :class="currentLanguage === 'en' ? 'text-orange' : 'text-blue'">EN</button>
+        <button @click="chooseLanguage('da')" class="block w-full text-left px-4 py-2 font-[raleway] uppercase hover:bg-blue hover:text-white transition-colors" :class="currentLanguage === 'da' ? 'text-orange' : 'text-blue'">DA</button>
+        <button @click="chooseLanguage('de')" class="block w-full text-left px-4 py-2 font-[raleway] uppercase hover:bg-blue hover:text-white transition-colors" :class="currentLanguage === 'de' ? 'text-orange' : 'text-blue'">DE</button>
+        </div>
+        </div>
               <button class="flex items-center justify-center px-4 lg:px-6 py-1 lg:py-2">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" class="w-4 h-4 md:w-6 md:h-6 sm:w-5 sm:h-5">
                   <path fill="#101010" d="M6.5 2a4.5 4.5 0 0 1 3.515 7.308l2.839 2.839l.064.078a.5.5 0 0 1-.693.693l-.079-.064l-2.838-2.84A4.5 4.5 0 1 1 6.5 2m0 1a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7"/>
