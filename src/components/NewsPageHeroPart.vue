@@ -8,11 +8,11 @@
     </div>
 
     <div class="grid grid-cols-3 mt-10">
-        <div class="bg-blue p-10 flex items-center col-span-2">
+        <div class="bg-blue p-10 flex items-center col-span-2 rounded-l-2xl">
             <p class="text-white font-[raleway] text-lg">{{ news.description }}</p>
         </div>
         <div class="h-96 col-span-1">
-            <img :src="news.image" :alt="news.title" class="w-full h-full object-cover">
+            <img :src="news.image" :alt="news.title" class="w-full h-full object-cover rounded-r-2xl">
         </div>
     </div>
 </template>

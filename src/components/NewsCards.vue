@@ -10,7 +10,7 @@
           {{ news.category }}
         </span>
         <RouterLink :to="`/news/${news.slug}`">
-          <h3 class="text-white text-2xl font-semibold leading-snug font-[raleway] m-0 hover:text-orange">
+          <h3 class="text-white text-2xl font-semibold leading-snug font-[raleway] m-0 hover:text-orange  hover:rotate-3 transition-transform duration-75">
             <span class="text-orange shadow-2xl">{{ news.title[0] }}</span>{{ news.title.slice(1) }}
           </h3>
         </RouterLink>
