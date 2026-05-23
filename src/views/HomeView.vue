@@ -9,7 +9,7 @@
 
 <template>
   <main>
-    <div class="px-20">
+    <div class="px-20 max-md:px-8 max-sm:px-2.5">
       <HeroPart />
       <div class="mt-16 md:mt-46 sm:mt-26 lg:mt-66">
         <CardsPart />
