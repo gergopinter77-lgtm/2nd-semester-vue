@@ -4,6 +4,7 @@
   import AboutPart from '@/components/AboutPart.vue';
   import NewsEvent from '@/components/NewsEvent.vue';
   import MediaPart from '@/components/MediaPart.vue';
+  import NewsevHeroPart from '@/components/NewsevHeroPart.vue';
   import TestimonialPart from '@/components/TestimonialPart.vue';
 </script>
 
@@ -15,6 +16,7 @@
         <CardsPart />
       </div>
         <AboutPart />
+        <NewsevHeroPart />
         <NewsEvent />
        <div class="mt-20">
         <MediaPart />
