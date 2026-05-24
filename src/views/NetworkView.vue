@@ -4,7 +4,7 @@
 
 <template>
   <main>
-    <div class="px-20">
+    <div class="px-4 md:px-20">
       <NetworkPart />
     </div>
   </main>
