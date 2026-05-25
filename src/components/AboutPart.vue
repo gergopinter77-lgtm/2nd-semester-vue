@@ -18,7 +18,7 @@
                         :style="{ transitionDelay: isVisible ? `${i * 0.1}s` : '0s' }"
                         @click="activeIndex = i"
                     >
-                        {{ item.label }}
+                        {{ item[`label_${currentLanguage}`] || item.label }}
                     </div>
                 </div>
 
@@ -27,8 +27,8 @@
                 <div class="pl-10 min-h-48">
                     <Transition name="fade" mode="out-in">
                         <div :key="activeIndex">
-                            <p class="font-[raleway] text-2xl font-bold mb-4 text-blue">{{ active.title }}</p>
-                            <p class="text-md leading-7 text-blue/50 font-light">{{ active.body }}</p>
+                            <p class="font-[raleway] text-2xl font-bold mb-4 text-blue">{{ active[`title_${currentLanguage}`] || active.title }}</p>
+                            <p class="text-md leading-7 text-blue/50 font-light">{{ active[`body_${currentLanguage}`] || active.body }}</p>
                         </div>
                     </Transition>
                 </div>
@@ -39,8 +39,12 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, } from 'vue'
 import { useAbout } from './modules/useAbout.js'
+import { useLanguage } from './modules/useLanguage.js'
+
+const { currentLanguage } = useLanguage()
+
 
 const { items, activeIndex, active } = useAbout()
 

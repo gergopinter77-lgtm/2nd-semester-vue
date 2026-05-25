@@ -1,5 +1,9 @@
 export const translations = {
     en: {
+        HomeHeroText: 'Working Cross Border Was Never This Easy Before',
+        HomeNewsEventText: 'What\'s happening right now in the world of business',
+        HomeMediaText: 'Some memories from our past events',
+        CheckOutMore: 'Check out more',
         networkTitle: 'Meet our network of 26 partners across the border',
         networkSubtitle: 'Meet leaders and specialists from across the region. Share experience, build relationships, and put new knowledge to work — across industries and roles.',
         networkHeading: 'Network',
@@ -12,6 +16,10 @@ export const translations = {
         memberNotFound: 'Member not found',
     },
     da: {
+        HomeHeroText: 'Arbejde på tværs af grænsen har aldrig været så let før',
+        HomeNewsEventText: 'Hvad sker der lige nu i erhvervslivet',
+        HomeMediaText: 'Nogle memory fra vores tidligere begivenheder',
+        CheckOutMore: 'Se mere',
         networkTitle: 'Mød vores netværk af 26 partnere på tværs af grænsen',
         networkSubtitle: 'Mød ledere og specialister fra hele regionen. Del erfaringer, skab relationer, og bring ny viden i spil — på tværs af brancher og fag.',
         networkHeading: 'Netværk',
@@ -24,6 +32,10 @@ export const translations = {
         memberNotFound: 'Medlem ikke fundet',
     },
     de: {
+        HomeHeroText: 'Arbeiten über die Grenze hinweg war noch nie so einfach',
+        HomeNewsEventText: 'Was passiert gerade in der Welt des Geschäfts',
+        HomeMediaText: 'Einige Erinnerungen an unsere früheren Veranstaltungen',
+        CheckOutMore: 'Weitere Informationen',
         networkTitle: 'Lernen Sie unser Netzwerk aus 26 Partnern über die Grenze hinweg kennen',
         networkSubtitle: 'Treffen Sie Führungskräfte und Spezialisten aus der gesamten Region. Teilen Sie Erfahrungen, knüpfen Sie Beziehungen und bringen Sie neues Wissen ein — über Branchen und Berufe hinweg.',
         networkHeading: 'Netzwerk',

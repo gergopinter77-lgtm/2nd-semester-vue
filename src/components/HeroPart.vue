@@ -4,14 +4,18 @@
             class="col-start-1 lg:col-end-9 col-end-11 text-xl sm:text-2xl md:text-4xl lg:text-6xl text-blue font-semibold font-[raleway]"
             :class="{ 'is-visible': isVisible }"
         >
-            <span class="text-orange">W</span>orking Cross Border Was Never This Easy Before
+            <span class="text-orange">{{t.HomeHeroText.charAt(0)}}</span>{{ t.HomeHeroText.slice(1) }}
         </h1>
     </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
+import { useLanguage } from './modules/useLanguage'
+import { translations } from './modules/translations'
 
+const { currentLanguage } = useLanguage()
+const t = computed(() => translations[currentLanguage.value])
 const isVisible = ref(false)
 
 onMounted(() => {

@@ -7,12 +7,12 @@
             :class="{ 'is-visible': visibleCards[index] }"
             :style="{ transitionDelay: `${index * 0.15}s` }"
         >
-            <h3 class="text-white text-base max-md:text-sm max-[640px]:text-xs font-[raleway] font-semibold mb-8.5 w-49.5">{{ card.text }}</h3>
+            <h3 class="text-white text-base max-md:text-sm max-[640px]:text-xs font-[raleway] font-semibold mb-8.5 w-49.5">{{ card[`text_${currentLanguage}`] || card.text }}</h3>
             <div class="flex flex-row items-center">
                 <h4 class="text-orange text-6xl max-md:text-5xl max-[640px]:text-4xl font-semibold group-hover:text-white transition-colors duration-200">{{ card.number }}</h4>
                 <div class="felx flex-col ml-2.5 place-items-center">
-                    <p class="text-white max-md:text-xs text-sm max-md:mb-1.5 mb-3 font-[raleway]">{{ card.text2 }}</p>
-                    <RouterLink :to="card.route" class="whitespace-nowrap text-white bg-orange py-3 px-3.25 max-sm:px-1 text-xs rounded-lg font-[raleway] uppercase">{{ card.button }}</RouterLink>
+                    <p class="text-white max-md:text-xs text-sm max-md:mb-1.5 mb-3 font-[raleway]">{{ card[`text2_${currentLanguage}`] || card.text2 }}</p>
+                    <RouterLink :to="card.route" class="whitespace-nowrap text-white bg-orange py-3 px-3.25 max-sm:px-1 text-xs rounded-lg font-[raleway] uppercase">{{ card[`button_${currentLanguage}`] || card.button }}</RouterLink>
                 </div>
             </div>
         </div>
@@ -20,9 +20,11 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, } from 'vue'
 import { useCards } from './modules/useCards'
+import { useLanguage } from './modules/useLanguage'
 
+const { currentLanguage } = useLanguage()
 const { cards } = useCards()
 
 const gridRef = ref(null)

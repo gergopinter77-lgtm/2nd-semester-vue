@@ -68,7 +68,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, onMounted, onBeforeUnmount, } from 'vue';
 import { useNewev } from './modules/useNewev';
 
 const { newses } = useNewev();
