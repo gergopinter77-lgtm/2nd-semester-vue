@@ -78,15 +78,15 @@ const closeMenu = () => {
 
     <RouterView />
 
-    <footer class="bg-blue w-screen px-20 py-12">
-      <div class="grid grid-cols-3 gap-10 text-white font-[raleway]">
-        <div class="flex flex-col justify-between">
-          <img class="w-60" src="@/assets/logo2.svg" alt="Business Region Logo">
+              <footer class="bg-blue w-full px-6 md:px-20 py-10 md:py-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 text-white font-[raleway]">
+        <div class="flex flex-col items-center md:items-start gap-4 md:gap-0 md:justify-between text-center md:text-left">
+          <img class="w-48 md:w-60" src="@/assets/logo2.svg" alt="Business Region Logo">
           <p class="text-sm">© 2026 Business Region <br> All Rights Reserved</p>
         </div>
 
-        <div class="flex flex-col items-center border-r border-white/30 pr-10">
-          <h3 class="text-lg font-semibold mb-6">QUICK LINKS</h3>
+        <div class="flex flex-col items-center md:border-r md:border-white/30 md:pr-10 border-t border-white/30 md:border-t-0 pt-8 md:pt-0">
+          <h3 class="text-lg font-semibold mb-4 md:mb-6">QUICK LINKS</h3>
           <ul class="flex flex-col gap-3 text-center">
             <li><RouterLink to="" class="hover:text-orange">ABOUT US</RouterLink></li>
             <li><RouterLink to="/events" class="hover:text-orange">EVENTS</RouterLink></li>
@@ -95,8 +95,8 @@ const closeMenu = () => {
           </ul>
         </div>
 
-        <div class="flex flex-col items-start">
-          <h3 class="text-lg font-semibold mb-6">FOLLOW US</h3>
+        <div class="flex flex-col items-center md:items-start border-t border-white/30 md:border-t-0 pt-8 md:pt-0">
+          <h3 class="text-lg font-semibold mb-4 md:mb-6">FOLLOW US</h3>
           <div class="flex gap-4">
             <a href="https://www.instagram.com/businessregiondedk/" target="_blank" class="hover:opacity-70">
               <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="#fffaf0" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
