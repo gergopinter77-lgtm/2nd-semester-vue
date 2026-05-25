@@ -47,11 +47,17 @@
             </div>
 
                 <div class="relative flex items-center">
-                    <input v-model="store.searchQuery" type="text" class="w-67.75 h-7.5 bg-white border border-black focus:outline-none focus:border-black-70 rounded">
-                    <button @click="updateSearch" class="absolute right-2.5 text-orange hover:text-orange/70 transition-colors duration-150">
+                    <input
+                        v-model="store.searchQuery"
+                        type="text"
+                        class="w-67.75 h-7.5 bg-white border border-black focus:outline-none focus:border-black-70 rounded"
+                    >
+                    <button
+                        class="absolute right-2.5 text-orange hover:text-orange/70 transition-colors duration-150"
+                    >
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="11" cy="11" r="8"/>
-                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
                         </svg>
                     </button>
                 </div>
@@ -80,7 +86,7 @@
                 class="flex items-center gap-1.5 px-2.5 py-0.5 border border-orange/40 text-[10px] tracking-widest uppercase text-[#c8922a]"
                 >
                 "{{ store.searchQuery }}"
-                <button class="text-orange/60 hover:text-[#c8922a] leading-none">×</button>
+                <button @click="clearSearch" class="text-orange/60 hover:text-[#c8922a] leading-none">×</button>
                 </span>
             </div>
             </Transition>
@@ -97,6 +103,10 @@ const store = useNewsStore()
 
 const filterOpen = ref(false)
 const filterRef = ref(null)
+
+function clearSearch() {
+    store.searchQuery = ''
+}
 
 function toggleFilter() {
     filterOpen.value = !filterOpen.value

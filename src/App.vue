@@ -24,7 +24,7 @@ const closeMenu = () => {
       <div class="grid grid-cols-3 max-[874px]:grid-cols-2 items-center gap-2.5 w-full px-20 max-md:px-8 max-sm:px-2.5">
 
         <div class="flex justify-start items-center">
-          <img class="w-70 h-20 max-[874px]:min-h-10 max-[874px]:min-w-60 md:pr-25 lg:pr-30 pr-20 pb-1" src="@/assets/logo1.svg" alt="Logo">
+          <img class="w-70 h-20 max-[874px]:min-h-10 max-[874px]:min-w-60 max-[874px]max-h-10 max-[874px]:max-w-60 md:pr-25 lg:pr-30 pr-20 pb-1" src="@/assets/logo1.svg" alt="Logo">
         </div>
 
         <div class="flex justify-center py-13.25 items-center max-[874px]:hidden">
@@ -39,9 +39,8 @@ const closeMenu = () => {
         <div class="flex justify-end items-center">
           <div class="relative flex items-center border border-blue rounded-lg">
 
-            <!-- Language selector -->
             <div class="relative border-r border-blue">
-              <button @click="languageOpen = !languageOpen; menuOpen = false" class="flex items-center gap-1 text-blue hover:text-orange text-sm lg:text-lg font-[Raleway] px-4 lg:px-6 py-1 lg:py-2 uppercase transition-colors duration-300">
+              <button @click="languageOpen = !languageOpen; menuOpen = false" class="flex items-center gap-1 text-blue hover:text-orange text-sm lg:text-lg font-[Raleway] px-4 lg:px-6 py-2 uppercase transition-colors duration-300">
                 {{ currentLanguage }}
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" class="transition-transform duration-300" :class="languageOpen ? 'rotate-180' : ''">
                   <path fill="currentColor" d="M12 15.4l-6-6L7.4 8l4.6 4.6L16.6 8L18 9.4z"/>
@@ -54,24 +53,14 @@ const closeMenu = () => {
               </div>
             </div>
 
-            <!-- Search button -->
-            <button class="flex items-center justify-center px-4 lg:px-6 py-1 lg:py-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" class="w-4 h-4 md:w-6 md:h-6 sm:w-5 sm:h-5">
-                <path fill="#101010" d="M6.5 2a4.5 4.5 0 0 1 3.515 7.308l2.839 2.839l.064.078a.5.5 0 0 1-.693.693l-.079-.064l-2.838-2.84A4.5 4.5 0 1 1 6.5 2m0 1a3.5 3.5 0 1 0 0 7a3.5 3.5 0 0 0 0-7"/>
-              </svg>
-            </button>
 
-            <span class="w-px h-11 bg-blue"></span>
-
-            <!-- Menu button -->
-            <button @click="menuOpen = !menuOpen; languageOpen = false" class="flex items-center gap-2 text-blue hover:text-orange text-sm lg:text-lg font-[Raleway] px-4 lg:px-6 py-1 lg:py-2 transition-colors duration-300">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 h-4 md:w-6 md:h-6 sm:w-5 sm:h-5">
+            <button @click="menuOpen = !menuOpen; languageOpen = false" class="flex items-center gap-2 text-blue hover:text-orange text-sm lg:text-lg font-[Raleway] px-4 lg:px-6 py-2 transition-colors duration-300">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6">
                 <path fill="#101010" d="M4 18q-.425 0-.712-.288T3 17t.288-.712T4 16h16q.425 0 .713.288T21 17t-.288.713T20 18zm0-5q-.425 0-.712-.288T3 12t.288-.712T4 11h16q.425 0 .713.288T21 12t-.288.713T20 13zm0-5q-.425 0-.712-.288T3 7t.288-.712T4 6h16q.425 0 .713.288T21 7t-.288.713T20 8z"/>
               </svg>
               <span class="max-[874px]:hidden">MENU</span>
             </button>
 
-            <!-- Dropdown -->
             <div v-if="menuOpen" class="absolute top-full right-0 mt-1 bg-white border border-blue rounded-lg overflow-hidden z-50 w-full">
               <RouterLink @click="closeMenu" to="/" class="min-[875px]:hidden block px-6 py-3 text-blue hover:bg-blue hover:text-white font-[Raleway] text-sm uppercase transition-colors">HOME</RouterLink>
               <RouterLink @click="closeMenu" to="/news" class="min-[875px]:hidden block px-6 py-3 text-blue hover:bg-blue hover:text-white font-[Raleway] text-sm uppercase transition-colors border-t border-blue/20">NEWS</RouterLink>
@@ -84,7 +73,6 @@ const closeMenu = () => {
         </div>
       </div>
 
-      <!-- Backdrop -->
       <div v-if="menuOpen || languageOpen" @click="menuOpen = false; languageOpen = false" class="fixed inset-0 z-40"></div>
     </header>
 
