@@ -16,7 +16,7 @@ import Mediafilter from '@/components/MediafilterPart.vue';
     <div class="lg:px-20 md:px-10 px-5">
         <MediaChanelPart />
     </div>
-    <div class="my-10">
+    <div class="my-10 lg:px-20 md:px-10 px-5">
         <NewsLetterPart />
     </div>
     <div class="my-10 lg:px-20 md:px-10 px-5">
