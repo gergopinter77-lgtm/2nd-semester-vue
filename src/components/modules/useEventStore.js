@@ -11,7 +11,7 @@ export const useEventStore = defineStore('events', () => {
         return eventCards.value.filter(card => {
             const matchesCategory =
                 activeCategories.value.length === 0 ||
-                activeCategories.value.includes(card.category)
+                activeCategories.value.includes(card.category.toLocaleLowerCase())
 
             const matchesSearch =
                 !searchQuery.value ||
