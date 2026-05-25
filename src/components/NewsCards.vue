@@ -58,7 +58,7 @@
 </template>
 
 <script setup>
-import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue';
+import { ref, computed, onMounted, onBeforeUnmount, watch, nextTick } from 'vue';
 import { useNewsStore } from './modules/useNewsStore';
 
 const store = useNewsStore();
@@ -92,6 +92,23 @@ function observeEl(el) {
   if (el && observer) observer.observe(el);
 }
 
+function resetAndObserve() {
+  nextTick(() => {
+    desktopRefs.value.forEach(el => {
+      if (el) {
+        el.classList.remove('is-visible');
+        observer.observe(el);
+      }
+    });
+    Object.values(mobileRefs.value).forEach(el => {
+      if (el) {
+        el.classList.remove('is-visible');
+        observer.observe(el);
+      }
+    });
+  });
+}
+
 function createObserver() {
   observer = new IntersectionObserver(
     (entries) => {
@@ -112,6 +129,11 @@ onMounted(() => {
   Object.values(mobileRefs.value).forEach(observeEl);
 });
 
+watch(() => store.filteredCards, () => {
+  visibleCount.value = INITIAL;
+  resetAndObserve();
+});
+
 watch(visibleMobileCards, async () => {
   await nextTick();
   Object.values(mobileRefs.value).forEach((el) => {
@@ -122,10 +144,7 @@ watch(visibleMobileCards, async () => {
 onBeforeUnmount(() => {
   if (observer) observer.disconnect();
 });
-
-import { nextTick } from 'vue';
 </script>
-
 <style scoped>
 .news-card {
   opacity: 0;

@@ -15,7 +15,7 @@
 
 <template>
   <main v-if="news">
-    <div class="px-20">
+    <div class="px-20 max-md:px-8 max-sm:px-2.5">
       <NewsPageHeroPart :news="news"/>
     </div>
     <div class="py-10">
