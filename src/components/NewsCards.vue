@@ -5,9 +5,9 @@
       v-for="(news, index) in store.filteredCards"
       :key="news.id"
       :ref="el => setDesktopRef(el, index)"
-      class="news-card hidden md:block col-span-3 rounded-2xl overflow-hidden relative h-125"
+      class="news-card hidden md:block col-span-3 rounded-2xl overflow-hidden relative h-125 group hover:shadow-2xl transition-shadow duration-300"
     >
-      <img :src="news.image" alt="" class="w-full h-full object-cover" />
+      <img :src="news.image" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
       <div class="absolute inset-0 bg-blue/60 rounded-lg"></div>
       <div class="absolute bottom-0 left-0 right-0 px-4.5 pb-5.5">
         <span class="inline-block text-sm shadow-2xl font-medium tracking-widest uppercase text-white
@@ -15,7 +15,7 @@
           {{ news.category }}
         </span>
         <RouterLink :to="`/news/${news.slug}`">
-          <h3 class="text-white text-2xl font-semibold leading-snug font-[raleway] m-0 hover:text-orange transition-colors duration-75">
+          <h3 class="text-white text-2xl font-semibold leading-snug font-[raleway] m-0 group-hover:text-orange transition-colors duration-200">
             <span class="text-orange shadow-2xl">{{ news.title[0] }}</span>{{ news.title.slice(1) }}
           </h3>
         </RouterLink>
@@ -28,7 +28,7 @@
           v-for="news in visibleMobileCards"
           :key="news.id"
           :ref="el => setMobileRef(el, news.id)"
-          class="mobile-card rounded-2xl overflow-hidden relative h-72"
+          class="mobile-card group rounded-2xl overflow-hidden relative h-72 hover:shadow-2xl transition-shadow duration-300"
         >
           <img :src="news.image" alt="" class="w-full h-full object-cover" />
           <div class="absolute inset-0 bg-blue/60 rounded-lg"></div>
