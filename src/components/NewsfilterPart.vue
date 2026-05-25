@@ -1,13 +1,13 @@
 <template>
     <div class="news-header py-4 font-[raleway]">
-        <div class="flex items-baseline">
-            <h1 class="text-blue text-4xl font-bold uppercase">
+        <div class="flex items-center">
+            <h1 class="text-blue lg:text-4xl md:text-3xl sm:text-2xl text-xl font-bold uppercase">
                 News
             </h1>
             <div class="flex flex-row justify-end w-screen gap-2">
             <div class="flex items-center gap-4">
                 <div class="relative" ref="filterRef">
-                    <button @click="toggleFilter" class="flex items-center text-2xl gap-2 text-blue font-medium uppercase tracking-widest" :class="{ 'opacity-70': filterOpen }">
+                    <button @click="toggleFilter" class="flex items-center lg:text-2xl md:text-xl sm:text-lg text-base max-md:hidden gap-2 text-blue font-medium uppercase tracking-widest" :class="{ 'opacity-70': filterOpen }">
                         <span>Filter</span>
                             <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-[0.1em]">
                                 <line x1="4" y1="6" x2="20" y2="6"/>
@@ -50,7 +50,7 @@
                     <input
                         v-model="store.searchQuery"
                         type="text"
-                        class="w-67.75 h-7.5 bg-white border border-black focus:outline-none focus:border-black-70 rounded"
+                        class="lg:w-67.75 lg:h-7.5 md:h-6 md:w-60 h-6 w-50 bg-white border border-black focus:outline-none focus:border-black-70 rounded"
                     >
                     <button
                         class="absolute right-2.5 text-orange hover:text-orange/70 transition-colors duration-150"
