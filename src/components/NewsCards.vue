@@ -60,6 +60,9 @@
 <script setup>
 import { ref, computed, onMounted, onBeforeUnmount, watch, nextTick } from 'vue';
 import { useNewsStore } from './modules/useNewsStore';
+import { useLanguage } from './modules/useLanguage';
+
+const { currentLanguage } = useLanguage()
 
 const store = useNewsStore();
 

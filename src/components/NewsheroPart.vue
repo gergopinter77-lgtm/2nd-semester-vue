@@ -3,13 +3,19 @@
         <div class="col-start-1 col-end-10">
             <h1 class="text-xl sm:text-2xl md:text-4xl lg:text-6xl text-blue font-semibold font-[raleway]"
                 :class="{ 'is-visible': isVisible }">
-                <span class="text-orange">S</span>tay Updated on everything that’s happening in the world of business</h1>
+                <span class="text-orange">{{ t.NewsHero.charAt(0) }}</span>{{ t.NewsHero.slice(1) }}
+            </h1>
         </div>
     </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
+import { translations } from './modules/translations'
+import { useLanguage } from './modules/useLanguage'
+
+const { currentLanguage } = useLanguage()
+const t = computed(() => translations[currentLanguage.value])
 
 const isVisible = ref(false)
 

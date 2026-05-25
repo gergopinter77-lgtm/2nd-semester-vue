@@ -2,7 +2,7 @@
     <div class="news-header py-4 font-[raleway]">
         <div class="flex items-center">
             <h1 class="text-blue lg:text-4xl md:text-3xl sm:text-2xl text-xl font-bold uppercase">
-                News
+                {{ t.News }}
             </h1>
             <div class="flex flex-row justify-end w-screen gap-2">
             <div class="flex items-center gap-4">
@@ -94,9 +94,14 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useCategories } from './modules/useCategories'
 import { useNewsStore } from './modules/useNewsStore'
+import { useLanguage } from './modules/useLanguage'
+import { translations } from './modules/translations'
+
+const { currentLanguage } = useLanguage()
+const t = computed(() => translations[currentLanguage.value])
 
 const { categories } = useCategories()
 const store = useNewsStore()
