@@ -19,7 +19,7 @@ const closeMenu = () => {
 </script>
 
 <template>
-  <div class="bg-white min-h-screen overflow-x-hidden max-[874px]:py-5">
+  <div class="bg-white min-h-screen overflow-x-hidden max-[874px]:pt-5">
     <header class="w-full">
       <div class="grid grid-cols-3 max-[874px]:grid-cols-2 items-center gap-2.5 w-full px-20 max-md:px-8 max-sm:px-2.5">
 
