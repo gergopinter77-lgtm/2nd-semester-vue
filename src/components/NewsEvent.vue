@@ -5,7 +5,7 @@
       v-for="(news, index) in newses"
       :key="news"
       :ref="el => setCardRef(el, index)"
-      class="news-card hidden md:block col-span-6 rounded-lg h-125 relative overflow-hidden"
+      class="news-card hidden md:block max-md:col-span-6 col-span-3 rounded-lg h-125 relative overflow-hidden"
     >
       <img :src="news.image" alt="" class="w-full h-full object-cover rounded-lg text-white" />
       <div class="absolute inset-0 bg-blue/60 rounded-lg"></div>
