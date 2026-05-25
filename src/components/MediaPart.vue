@@ -10,7 +10,7 @@
         <img :src="media.pictures" alt="" class="h-68.25 w-full object-cover rounded-xl">
       </div>
     </div>
-        <RouterLink class="self-center capitalize font-[raleway] font-semibold text-2xl bg-orange text-white px-10 py-2 rounded-lg">check out more</RouterLink>
+        <RouterLink to="/media" class="self-center capitalize font-[raleway] font-semibold text-2xl bg-orange text-white px-10 py-2 rounded-lg">check out more</RouterLink>
   </div>
 </template>
 
