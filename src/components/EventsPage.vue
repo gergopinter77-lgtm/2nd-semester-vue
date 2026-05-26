@@ -1,14 +1,13 @@
 <template>
-  <div class="px-4 sm:px-6 lg:px-0">
-    <div class="grid grid-cols-12 gap-2.5 pt-8 sm:pt-12 md:pt-20">
-      <div class="col-span-12 sm:col-span-10">
-        <h1 class="text-2xl sm:text-4xl md:text-6xl text-blue font-semibold font-[raleway]">
-          <span class="text-orange">{{ t.EventsTitle.charAt(0) }}</span>{{ t.EventsTitle.slice(1) }}
-        </h1>
-      </div>
+  <div class="grid grid-cols-12 gap-2.5 pt-8 sm:pt-12 md:pt-20">
+    <div class="col-span-12 sm:col-span-10">
+      <h1 class="text-2xl sm:text-4xl md:text-6xl text-blue font-semibold font-[raleway]">
+        <span class="text-orange">{{ t.EventsTitle.charAt(0) }}</span>{{ t.EventsTitle.slice(1) }}
+      </h1>
     </div>
+  </div>
 
-    <div class="mt-8 sm:mt-16 lg:mt-66">
+  <div class="mt-8 sm:mt-16 lg:mt-66">
       <div class="news-header py-4 font-[raleway]">
         <div class="flex flex-col md:flex-row md:items-baseline gap-4">
           <div class="flex items-center gap-2 md:gap-0 md:flex-none justify-between">
@@ -243,7 +242,6 @@
         </div>
       </div>
     </Teleport>
-  </div>
 </template>
 
 <script setup>
