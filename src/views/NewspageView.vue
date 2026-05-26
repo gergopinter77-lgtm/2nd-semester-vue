@@ -18,7 +18,7 @@
     <div class="px-20 max-md:px-8 max-sm:px-2.5">
       <NewsPageHeroPart :news="news"/>
     </div>
-    <div class="py-10">
+    <div class="py-10 px-20 max-md:px-8 max-sm:px-2.5">
       <NewsLetterPart/>
     </div>
   </main>
