@@ -68,6 +68,7 @@ const closeMenu = () => {
               <RouterLink @click="closeMenu" to="/events" class="min-[875px]:hidden block px-6 py-3 text-blue hover:bg-blue hover:text-white font-[Raleway] text-sm uppercase transition-colors border-t border-blue/20">EVENTS</RouterLink>
               <RouterLink @click="closeMenu" to="/network" class="min-[875px]:hidden block px-6 py-3 text-blue hover:bg-blue hover:text-white font-[Raleway] text-sm uppercase transition-colors border-t border-blue/20">NETWORK</RouterLink>
               <RouterLink @click="closeMenu" to="/media" class="block px-6 py-3 text-blue hover:bg-blue hover:text-white font-[Raleway] text-sm uppercase transition-colors border-t border-blue/20 min-[875px]:border-t-0">MEDIA</RouterLink>
+              <RouterLink @click="closeMenu" to="/about" class="block px-6 py-3 text-blue hover:bg-blue hover:text-white font-[Raleway] text-sm uppercase transition-colors border-t border-blue/20 min-[875px]:border-t-0">ABOUT</RouterLink>
             </div>
 
           </div>
