@@ -32,7 +32,7 @@
                             Category
                         </div>
                         <button v-for="cat in categories" :key="cat.value" @click="toggleCategory(cat.value)" class="w-full flex items-center justify-between px-4 py-2 text-xs text-blue hover:bg-[#0f2c4a]/6 transition-colors duration-100" :class="{ 'font-bold': store.activeCategories.includes(cat.value) }">
-                            <span class="uppercase tracking-widest text-[11px]">{{ cat.label }}</span>
+                            <span class="uppercase tracking-widest text-[11px]">{{ cat[`lable_${currentLanguage}`] || cat.lable }}</span>
                             <span
                             v-if="store.activeCategories.includes(cat.value)"
                             class="w-2 h-2 rounded-full bg-white"

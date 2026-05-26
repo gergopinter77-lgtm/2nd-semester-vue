@@ -15,7 +15,7 @@ import NewsLetterPart from '@/components/NewsLetterPart.vue';
       </div>
       <NewsCards />
     </div>
-    <div class="my-20">
+    <div class="my-20 px-20 max-md:px-8 max-sm:px-2.5">
         <NewsLetterPart />
     </div>
     <div class="my-20">

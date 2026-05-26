@@ -12,12 +12,12 @@
       <div class="absolute bottom-0 left-0 right-0 px-4.5 pb-5.5">
         <span class="inline-block text-sm shadow-2xl font-medium tracking-widest uppercase text-white
                      border border-white/40 rounded px-1.75 py-0.5 mb-2.5">
-          {{ news.category }}
+          {{ news[`category_${currentLanguage}`] || news.category }}
         </span>
         <RouterLink :to="`/news/${news.slug}`">
-          <h3 class="text-white text-2xl font-semibold leading-snug font-[raleway] m-0 group-hover:text-orange transition-colors duration-200">
-            <span class="text-orange shadow-2xl">{{ news.title[0] }}</span>{{ news.title.slice(1) }}
-          </h3>
+      <h3 class="text-white text-2xl font-semibold leading-snug font-[raleway] m-0 group-hover:text-orange transition-colors duration-200">
+        <span class="text-orange shadow-2xl">{{ (news[`title_${currentLanguage}`] || news.title).charAt(0) }}</span>{{ (news[`title_${currentLanguage}`] || news.title).slice(1) }}
+      </h3>
         </RouterLink>
       </div>
     </div>
@@ -39,7 +39,7 @@
             </span>
             <RouterLink :to="`/news/${news.slug}`">
               <h3 class="text-white text-2xl font-semibold leading-snug font-[raleway] m-0 hover:text-orange transition-colors duration-75">
-                <span class="text-orange shadow-2xl">{{ news.title[0] }}</span>{{ news.title.slice(1) }}
+                <span class="text-orange shadow-2xl">{{ (news[`title_${currentLanguage}`] || news.title).charAt(0) }}</span>{{ (news[`title_${currentLanguage}`] || news.title).slice(1) }}
               </h3>
             </RouterLink>
           </div>
@@ -51,7 +51,7 @@
         @click="loadMore"
         class="mt-2 w-full py-3 rounded-xl bg-orange text-white font-[raleway] font-semibold text-sm tracking-widest uppercase hover:bg-blue hover:text-white transition-colors duration-200"
       >
-        Load more
+        {{ t.CheckOutMore }}
       </button>
     </div>
   </div>
@@ -61,8 +61,10 @@
 import { ref, computed, onMounted, onBeforeUnmount, watch, nextTick } from 'vue';
 import { useNewsStore } from './modules/useNewsStore';
 import { useLanguage } from './modules/useLanguage';
+import { translations } from './modules/translations';
 
 const { currentLanguage } = useLanguage()
+const t = computed(() => translations[currentLanguage.value])
 
 const store = useNewsStore();
 
