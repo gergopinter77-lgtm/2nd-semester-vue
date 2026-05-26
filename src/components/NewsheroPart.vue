@@ -1,7 +1,7 @@
 <template>
-    <div class="grid grid-cols-12 gap-2.5 pt-20">
-        <div class="col-start-1 col-end-10">
-            <h1 class="text-xl sm:text-2xl md:text-4xl lg:text-6xl text-blue font-semibold font-[raleway]"
+    <div class="grid grid-cols-12 gap-2.5 pt-8 sm:pt-12 md:pt-20">
+        <div class="col-span-12 sm:col-start-1 sm:col-end-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl text-blue font-semibold font-[raleway]"
                 :class="{ 'is-visible': isVisible }">
                 <span class="text-orange">{{ t.NewsHero.charAt(0) }}</span>{{ t.NewsHero.slice(1) }}
             </h1>

@@ -11,7 +11,7 @@
       <div class="news-header py-4 font-[raleway]">
         <div class="flex flex-col md:flex-row md:items-baseline gap-4">
           <div class="flex items-center gap-2 md:gap-0 md:flex-none justify-between">
-            <h1 class="text-blue text-2xl sm:text-3xl lg:text-4xl font-bold uppercase">
+            <h1 class="text-blue text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold uppercase">
               {{ t.EventsHeading }}
             </h1>
             <div class="relative flex items-center md:hidden ml-auto">
@@ -87,19 +87,19 @@
           leave-from-class="opacity-100 max-h-10"
           leave-to-class="opacity-0 max-h-0"
         >
-          <div v-if="store.activeCategories.length > 0 || store.searchQuery" class="flex flex-wrap items-center gap-2 mt-3 overflow-hidden">
-            <span class="text-[9px] sm:text-[10px] tracking-widest uppercase text-[#0f2c4a]/40">{{ t.EventsShowing }}</span>
+          <div v-if="store.activeCategories.length > 0 || store.searchQuery" class="flex items-center gap-2 mt-3 overflow-hidden">
+            <span class="text-[10px] tracking-widest uppercase text-[#0f2c4a]/40">{{ t.EventsShowing }}</span>
             <span
               v-for="cat in store.activeCategories"
               :key="cat"
-              class="flex items-center gap-1.5 px-2 sm:px-2.5 py-0.5 border border-[#0f2c4a]/30 text-[9px] sm:text-[10px] tracking-widest uppercase text-[#0f2c4a]"
+              class="flex items-center gap-1.5 px-2.5 py-0.5 border border-[#0f2c4a]/30 text-[10px] tracking-widest uppercase text-[#0f2c4a]"
             >
               {{ cat }}
               <button @click="toggleCategory(cat)" class="text-orange/60 hover:text-[#c8922a] leading-none">×</button>
             </span>
             <span
               v-if="store.searchQuery"
-              class="flex items-center gap-1.5 px-2 sm:px-2.5 py-0.5 border border-orange/40 text-[9px] sm:text-[10px] tracking-widest uppercase text-[#c8922a]"
+              class="flex items-center gap-1.5 px-2.5 py-0.5 border border-orange/40 text-[10px] tracking-widest uppercase text-[#c8922a]"
             >
               "{{ store.searchQuery }}"
               <button @click="store.searchQuery = ''" class="text-orange/60 hover:text-[#c8922a] leading-none">×</button>
@@ -109,7 +109,7 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-2.5 py-6 sm:py-0">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-2.5">
       <div v-for="event in store.filteredCards" :key="event.id" class="hidden md:block col-span-1 rounded-2xl overflow-hidden relative h-64 sm:h-80 md:h-96 lg:h-125 group hover:shadow-2xl transition-shadow duration-300">
         <img :src="event.image" :alt="event.title" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
         <div class="absolute inset-0 bg-blue/60"></div>
