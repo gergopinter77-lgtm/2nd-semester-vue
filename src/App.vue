@@ -19,8 +19,9 @@ const closeMenu = () => {
 </script>
 
 <template>
-  <div class="bg-white min-h-screen overflow-x-hidden max-[874px]:pt-5">
-    <header class="w-full">
+  <div class="min-h-screen overflow-x-hidden max-[874px]:pt-5 relative">
+    <div class="hero-background"></div>
+    <header class="w-full relative z-10">
       <div class="grid grid-cols-3 max-[874px]:grid-cols-2 items-center gap-2.5 w-full px-20 max-md:px-8 max-sm:px-2.5">
 
         <div class="flex justify-start items-center">
@@ -118,4 +119,18 @@ const closeMenu = () => {
 </template>
 
 <style scoped>
+  .hero-background {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('@/assets/heropattern.webp');
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1;
+  pointer-events: none;
+}
 </style>
