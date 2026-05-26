@@ -1,23 +1,35 @@
 <template>
-  <div>
-    <div class="grid grid-cols-12 gap-2.5 pt-20">
-      <div class="col-start-1 col-end-10">
-        <h1 class="text-6xl text-blue font-semibold font-[raleway]">
-          <span class="text-orange">J</span>oin our events & put your <br>name out there!
+  <div class="px-4 sm:px-6 lg:px-0">
+    <div class="grid grid-cols-12 gap-2.5 pt-8 sm:pt-12 md:pt-20">
+      <div class="col-span-12 sm:col-span-10">
+        <h1 class="text-2xl sm:text-4xl md:text-6xl text-blue font-semibold font-[raleway]">
+          <span class="text-orange">J</span>oin our events & put your <br class="hidden sm:block">name out there!
         </h1>
       </div>
     </div>
 
-    <div class="mt-66">
+    <div class="mt-8 sm:mt-16 lg:mt-66">
       <div class="news-header py-4 font-[raleway]">
-        <div class="flex items-baseline">
-          <h1 class="text-blue text-4xl font-bold uppercase">
-            Events
-          </h1>
-          <div class="flex flex-row justify-end w-screen gap-2">
+        <div class="flex flex-col md:flex-row md:items-baseline gap-4">
+          <div class="flex items-center gap-2 md:gap-0 md:flex-none justify-between">
+            <h1 class="text-blue text-2xl sm:text-3xl lg:text-4xl font-bold uppercase">
+              Events
+            </h1>
+            <div class="relative flex items-center md:hidden ml-auto">
+              <input v-model="store.searchQuery" type="text" class="w-32 sm:w-40 h-7.5 bg-white border border-black focus:outline-none focus:border-black-70 rounded text-sm">
+              <button @click="updateSearch" class="absolute right-2.5 text-orange hover:text-orange/70 transition-colors duration-150">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"/>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="hidden md:flex flex-row gap-2 md:justify-end md:w-full lg:gap-2">
             <div class="flex items-center gap-4">
               <div class="relative" ref="filterRef">
-                <button @click="toggleFilter" class="flex items-center text-2xl gap-2 text-blue font-medium uppercase tracking-widest" :class="{ 'opacity-70': filterOpen }">
+                <button @click="toggleFilter" class="flex items-center text-lg lg:text-2xl gap-2 text-blue font-medium uppercase tracking-widest" :class="{ 'opacity-70': filterOpen }">
                   <span>Filter</span>
                   <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-[0.1em]">
                     <line x1="4" y1="6" x2="20" y2="6"/>
@@ -76,19 +88,19 @@
           leave-from-class="opacity-100 max-h-10"
           leave-to-class="opacity-0 max-h-0"
         >
-          <div v-if="store.activeCategories.length > 0 || store.searchQuery" class="flex items-center gap-2 mt-3 overflow-hidden">
-            <span class="text-[10px] tracking-widest uppercase text-[#0f2c4a]/40">Showing:</span>
+          <div v-if="store.activeCategories.length > 0 || store.searchQuery" class="flex flex-wrap items-center gap-2 mt-3 overflow-hidden">
+            <span class="text-[9px] sm:text-[10px] tracking-widest uppercase text-[#0f2c4a]/40">Showing:</span>
             <span
               v-for="cat in store.activeCategories"
               :key="cat"
-              class="flex items-center gap-1.5 px-2.5 py-0.5 border border-[#0f2c4a]/30 text-[10px] tracking-widest uppercase text-[#0f2c4a]"
+              class="flex items-center gap-1.5 px-2 sm:px-2.5 py-0.5 border border-[#0f2c4a]/30 text-[9px] sm:text-[10px] tracking-widest uppercase text-[#0f2c4a]"
             >
               {{ cat }}
               <button @click="toggleCategory(cat)" class="text-orange/60 hover:text-[#c8922a] leading-none">×</button>
             </span>
             <span
               v-if="store.searchQuery"
-              class="flex items-center gap-1.5 px-2.5 py-0.5 border border-orange/40 text-[10px] tracking-widest uppercase text-[#c8922a]"
+              class="flex items-center gap-1.5 px-2 sm:px-2.5 py-0.5 border border-orange/40 text-[9px] sm:text-[10px] tracking-widest uppercase text-[#c8922a]"
             >
               "{{ store.searchQuery }}"
               <button @click="store.searchQuery = ''" class="text-orange/60 hover:text-[#c8922a] leading-none">×</button>
@@ -98,45 +110,44 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-4 gap-x-2.5 gap-y-2.5">
-      <div v-for="event in store.filteredCards" :key="event.id" class="col-span-1 rounded-2xl overflow-hidden relative h-125 group hover:shadow-2xl transition-shadow duration-300">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-2.5 py-6 sm:py-0">
+      <div v-for="event in store.filteredCards" :key="event.id" class="col-span-1 rounded-2xl overflow-hidden relative h-64 sm:h-80 md:h-96 lg:h-125 group hover:shadow-2xl transition-shadow duration-300">
         <img :src="event.image" :alt="event.title" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
         <div class="absolute inset-0 bg-blue/60"></div>
 
-        <div class="absolute bottom-0 left-0 right-0 px-4.5 pb-5.5">
-          <span class="inline-block text-sm shadow-2xl font-medium tracking-widest uppercase text-white border border-white/40 rounded px-1.75 py-0.5 mb-2.5">
+        <div class="absolute bottom-0 left-0 right-0 px-3 sm:px-4.5 pb-3 sm:pb-5.5">
+          <span class="inline-block text-xs sm:text-sm shadow-2xl font-medium tracking-widest uppercase text-white border border-white/40 rounded px-1.5 sm:px-1.75 py-0.5 mb-2 sm:mb-2.5">
             {{ event.category }}
           </span>
           <RouterLink :to="`/events/${event.slug}`">
-            <h3 class="text-white text-2xl font-semibold leading-snug font-[raleway] m-0 group-hover:text-orange transition-colors duration-200">
+            <h3 class="text-white text-lg sm:text-xl lg:text-2xl font-semibold leading-snug font-[raleway] m-0 group-hover:text-orange transition-colors duration-200">
               <span class="text-orange shadow-2xl">{{ event.title[0] }}</span>{{ event.title.slice(1) }}
             </h3>
           </RouterLink>
 
-          <p class="text-white/80 text-sm mt-2.5 flex items-center gap-1">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <p class="text-white/80 text-xs sm:text-sm mt-1.5 sm:mt-2.5 flex items-center gap-1">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="flex-shrink-0">
               <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
               <line x1="16" y1="2" x2="16" y2="6"/>
               <line x1="8" y1="2" x2="8" y2="6"/>
               <line x1="3" y1="10" x2="21" y2="10"/>
             </svg>
-            {{ formatDate(event.date) }}
+            <span class="truncate">{{ formatDate(event.date) }}</span>
           </p>
 
-          <!-- Location -->
-          <p class="text-white/80 text-sm flex items-center gap-1">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <p class="text-white/80 text-xs sm:text-sm flex items-center gap-1">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="flex-shrink-0">
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
               <circle cx="12" cy="10" r="3"/>
             </svg>
-            {{ event.location }}
+            <span class="truncate">{{ event.location }}</span>
           </p>
         </div>
       </div>
     </div>
 
-    <div v-if="store.filteredCards.length === 0" class="text-center py-20">
-      <p class="text-2xl text-gray-600 font-[raleway]">No events found matching your criteria.</p>
+    <div v-if="store.filteredCards.length === 0" class="text-center py-12 sm:py-20">
+      <p class="text-lg sm:text-2xl text-gray-600 font-[raleway] px-4">No events found matching your criteria.</p>
     </div>
   </div>
 </template>

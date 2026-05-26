@@ -15,7 +15,9 @@
       <div class="mt-16 md:mt-46 sm:mt-26 lg:mt-66">
         <CardsPart />
       </div>
+      <div class="mt-20 mb-20">
         <AboutPart />
+      </div>
         <NewsevHeroPart />
         <NewsEvent />
        <div class="mt-20">

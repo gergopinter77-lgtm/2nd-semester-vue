@@ -1,7 +1,7 @@
 <template>
     <div class="grid grid-cols-12 gap-2.5" ref="sectionRef">
         <div
-            class="flex items-center justify-center cols-start-1 col-span-12 min-h-screen font-[raleway] section-item"
+            class="flex items-center justify-center cols-start-1 col-span-12 min-h-96 font-[raleway] section-item"
             :class="{ 'is-visible': isVisible }"
         >
             <div class="w-full grid grid-cols-[1fr_1px_1.7fr]">

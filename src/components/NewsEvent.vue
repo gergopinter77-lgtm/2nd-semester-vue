@@ -5,13 +5,13 @@
       v-for="(news, index) in newses"
       :key="news"
       :ref="el => setCardRef(el, index)"
-      class="news-card hidden md:block max-md:col-span-6 col-span-3 rounded-lg h-125 relative overflow-hidden"
+      class="news-card hidden md:block max-md:col-span-6 col-span-3 rounded-lg h-125 relative overflow-hidden group hover:shadow-2xl transition-shadow duration-300"
     >
-      <img :src="news.image" alt="" class="w-full h-full object-cover rounded-lg text-white" />
+      <img :src="news.image" alt="" class="w-full h-full object-cover rounded-lg text-white group-hover:scale-105 transition-transform duration-500"/>
       <div class="absolute inset-0 bg-blue/60 rounded-lg"></div>
       <RouterLink
         to="/news"
-        class="absolute bottom-6 left-7 right-4 text-[32px]/9 font-[raleway] font-semibold text-white text-shadow-lg hover:text-orange duration-75"
+        class="absolute bottom-6 left-7 right-4 text-[32px]/9 font-[raleway] font-semibold text-white text-shadow-lg group-hover:text-orange transition-colors duration-200"
       >
         <span class="text-orange">{{ news.text[0] }}</span>{{ news.text.slice(1) }}
       </RouterLink>

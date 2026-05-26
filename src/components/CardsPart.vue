@@ -3,7 +3,7 @@
         <div
             v-for="(card, index) in cards"
             :key="card"
-            class="col-span-1 bg-blue rounded-2xl max-[640px]:px-5 max-[640px]:py-4.75 px-9 py-8.75 flex flex-col justify-between card-item group hover:shadow-2xl transition-shadow duration-300 group-hover:scale-105 transition-transform duration-500"
+            class="col-span-1 bg-blue rounded-2xl max-[640px]:px-5 max-[640px]:py-4.75 px-9 py-8.75 flex flex-col justify-between card-item group hover:shadow-2xl group-hover:scale-105 transition duration-500"
             :class="{ 'is-visible': visibleCards[index] }"
             :style="{ transitionDelay: `${index * 0.15}s` }"
         >
