@@ -25,17 +25,8 @@
                 </p>
             </div>
             <div class="col-start-4 col-span-12 flex flex-row">
-                <h4 class="uppercase text-white font-[raleway] pt-8 font-bold text-lg lg:text-3xl md:text-2xl sm:text-lg md:mt-0 mt-0.75">Check out what other users have to say</h4>
                     <div class="pl-5 pt-8">
-                        <button
-                            class="w-9 h-9 rounded-full bg-white flex items-center justify-center shadow-[0_4px_24px_rgba(0,0,0,0.35)] cursor-pointer border-0 outline-none"
-                            style="background-color: #f8f0e3; box-shadow: 0 6px 32px rgba(0,0,0,0.4);"
-                            aria-label="Next">
-
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" class="w-6 h-6" fill="none">
                             <polyline points="9,5 16,12 9,19" stroke="#f07820" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
                     </div>
             </div>
         </div>

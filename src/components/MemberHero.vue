@@ -6,8 +6,8 @@
         </h1>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 mt-10 ">
-        <div class="bg-blue p-8 md:p-20 flex items-center ">
+    <div class="grid grid-cols-1 md:grid-cols-2 mt-10 rounded-2xl overflow-hidden ">
+        <div class="bg-blue p-8 md:p-20 flex items-center">
             <p class="text-white font-[raleway] text-base md:text-lg">{{ member[`descriptionLong_${currentLanguage}`] || member.descriptionLong }}</p>
         </div>
         <div class="h-64 md:h-96">
