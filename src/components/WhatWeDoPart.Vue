@@ -1,11 +1,11 @@
 <template>
     <div class="grid grid-cols-12 gap-2.5 sm:pt-20 pt-5">
-        <h1
-            class="col-start-1 lg:col-end-9 col-end-11 text-xl sm:text-2xl md:text-4xl lg:text-6xl text-blue font-semibold font-[raleway]"
+        <p
+            class="col-start-1 lg:col-end-9 col-end-11 text-base md:text-lg text-blue font-semibold font-[raleway]"
             :class="{ 'is-visible': isVisible }"
         >
             <span class="text-orange">{{t.WhatWeDo.charAt(0)}}</span>{{ t.WhatWeDo.slice(1) }}
-        </h1>
+        </p>
     </div>
 </template>
 
@@ -26,7 +26,7 @@ onMounted(() => {
 </script>
 
 <style scoped>
-h1 {
+h3 {
     opacity: 0;
     transform: translateY(24px);
     transition: opacity 0.7s ease, transform 0.7s ease;
