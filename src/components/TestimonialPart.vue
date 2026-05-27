@@ -20,10 +20,10 @@
                     </div>
                 </div>
                 <h5 class="text-lg lg:text-3xl md:text-2xl sm:text-xl text-white font-[raleway] italic mt-1 title-item" :class="{ 'is-visible': isVisible }">
-                    Lorem ipsum dolor sit amet!
+                    The bridge we needed for our expansion!
                 </h5>
                 <p class="text-white font-[raleway] italic font-thin lg:w-152.5 md:w-120 sm:w-110 w-110 mt-1 body-item" :class="{ 'is-visible': isVisible }">
-                    Lorem ipsum dolor sit amet! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Business DE-DK made entering the German market so much easier! The contacts, events, and insider knowledge we gained have saved us months of work and helped us build lasting partnerships across both countries.
                 </p>
             </div>
 

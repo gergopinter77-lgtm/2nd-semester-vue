@@ -92,7 +92,7 @@ const closeMenu = () => {
         <div class="flex flex-col items-center md:border-r md:border-white/30 md:pr-10 border-t border-white/30 md:border-t-0 pt-8 md:pt-0">
           <h3 class="text-lg font-semibold mb-4 md:mb-6">QUICK LINKS</h3>
           <ul class="flex flex-col gap-3 text-center">
-            <li><RouterLink to="" class="hover:text-orange">ABOUT US</RouterLink></li>
+            <li><RouterLink to="/about" class="hover:text-orange">ABOUT US</RouterLink></li>
             <li><RouterLink to="/events" class="hover:text-orange">EVENTS</RouterLink></li>
             <li><RouterLink to="/news" class="hover:text-orange">NEWS</RouterLink></li>
             <li><RouterLink to="/network" class="hover:text-orange">NETWORK</RouterLink></li>
