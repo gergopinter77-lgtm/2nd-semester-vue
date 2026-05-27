@@ -38,6 +38,11 @@ const router = createRouter({
       component: () => import('../views/MediaView.vue'),
     },
     {
+      path: '/media/:slug',
+      name: 'mediapage',
+      component: () => import('../views/MediapageView.vue'),
+    },
+    {
       path: '/news',
       name: 'news',
       component: () => import('../views/NewsView.vue'),

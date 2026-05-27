@@ -11,16 +11,17 @@
           <div class="absolute inset-0 bg-blue/50 rounded-xl">
           </div>
           <div class="absolute bottom-5 lg:pl-7 pl-5">
-            <h4 class="lg:text-lg text-sm font-[raleway] font-medium mt-2 top-0 left-0 static text-white text-shadow-lg/50 capitalize">{{ media[`title_${currentLanguage}`] || media.title }}</h4>
-            <div class="flex items-center gap-1">
-              <RouterLink to="/media" class="top-0 left-0 static flex items-center gap-1 ">
-                <p class="text-shadow-lg/50 text-white lg:text-sm text-xs font-[raleway] font-medium mt-2 pb-2">{{ t.CheckOutMore.slice(0) }}</p>
-                <div class="relative justify-center lg:w-8.25 lg:h-8.25 w-5.5 h-5.5">
-                  <svg class="absolute  lg:visible invisible pr-1.5" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.4167 31.8333C24.9313 31.8333 31.8333 24.9313 31.8333 16.4167C31.8333 7.90204 24.9313 1 16.4167 1C7.90204 1 1 7.90204 1 16.4167C1 24.9313 7.90204 31.8333 16.4167 31.8333Z" stroke="white" stroke-width="2" stroke-linejoin="round"/><path d="M14.104 23.3542L21.0415 16.4167L14.104 9.47919" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                  <svg class="absolute  lg:invisible visible pr-1.5 " width="22" height="22" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.4167 31.8333C24.9313 31.8333 31.8333 24.9313 31.8333 16.4167C31.8333 7.90204 24.9313 1 16.4167 1C7.90204 1 1 7.90204 1 16.4167C1 24.9313 7.90204 31.8333 16.4167 31.8333Z" stroke="white" stroke-width="2" stroke-linejoin="round"/><path d="M14.104 23.3542L21.0415 16.4167L14.104 9.47919" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <RouterLink :to="`/media/${media.slug}`" class="top-0 left-0 static flex items-center gap-1">
+              <div class="flex flex-col text-white text-2xl font-semibold leading-snug font-[raleway] m-0 hover:text-orange transition-colors duration-200" >
+                <h4 class="">{{ media[`title_${currentLanguage}`] || media.title }}</h4>
+                <div class="flex items-center gap-1">
+                    <p class="mt-2 pb-2">{{ t.CheckOutMore.slice(0) }}</p>
+                    <span class="w-6 h-6 md:w-7 md:h-7 rounded-full border-2 border-white group-hover:border-orange flex items-center justify-center shrink-0 ">
+                        <svg  class="" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"><path d="M9.7 18.3q-.275-.275-.275-.712t.275-.713L13.875 12L9.7 7.825q-.275-.275-.275-.713t.275-.712t.713-.275t.712.275l4.9 4.9q.15.15.213.325t.062.375t-.062.375t-.213.325l-4.9 4.9q-.275.275-.712.275t-.713-.275"/></svg>
+                    </span>
                 </div>
-              </RouterLink>
-            </div>
+              </div>
+            </RouterLink>
           </div>
         </div>
       </div>
