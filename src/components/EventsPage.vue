@@ -1,7 +1,7 @@
 <template>
   <div class="grid grid-cols-12 gap-2.5 pt-8 sm:pt-12 md:pt-20">
     <div class="col-span-12 sm:col-span-10">
-      <h1 class="text-2xl sm:text-4xl md:text-6xl text-blue font-semibold font-[raleway]">
+      <h1 class="text-2xl sm:text-4xl md:text-6xl text-blue font-semibold font-[raleway] hero-title" :class="{ 'is-visible': isVisible }">
         <span class="text-orange">{{ t.EventsTitle.charAt(0) }}</span>{{ t.EventsTitle.slice(1) }}
       </h1>
     </div>
@@ -110,7 +110,7 @@
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-2.5">
-      <div v-for="event in store.filteredCards" :key="event.id" class="hidden md:block col-span-1 rounded-2xl overflow-hidden relative h-64 sm:h-80 md:h-96 lg:h-125 group hover:shadow-2xl transition-shadow duration-300">
+      <div v-for="(event, index) in store.filteredCards" :key="event.id" :ref="el => setDesktopRef(el, index)" class="hidden md:block col-span-1 rounded-2xl overflow-hidden relative h-64 sm:h-80 md:h-96 lg:h-125 group hover:shadow-2xl transition-shadow duration-300 event-card">
         <img :src="event.image" :alt="event.title" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
         <div class="absolute inset-0 bg-blue/60"></div>
 
@@ -150,7 +150,8 @@
         <div
           v-for="event in visibleMobileCards"
           :key="event.id"
-          class="rounded-2xl overflow-hidden relative h-64 group hover:shadow-2xl transition-shadow duration-300"
+          :ref="el => setMobileRef(el, event.id)"
+          class="rounded-2xl overflow-hidden relative h-64 group hover:shadow-2xl transition-shadow duration-300 mobile-event-card"
         >
           <img :src="event.image" :alt="event.title" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
           <div class="absolute inset-0 bg-blue/60"></div>
@@ -245,19 +246,69 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted, computed } from 'vue'
+import { ref, onMounted, onUnmounted, computed, watch, nextTick } from 'vue'
 import { useEventStore } from './modules/useEventStore'
 import { useEventCategories } from './modules/useEventCategories'
 import { useLanguage } from './modules/useLanguage'
 import { translations } from './modules/translations'
+
 
 const store = useEventStore()
 const { categories } = useEventCategories()
 const filterOpen = ref(false)
 const filterRef = ref(null)
 const selectedEvent = ref(null)
+const isVisible = ref(false)
+
 const { currentLanguage } = useLanguage()
 const t = computed(() => translations[currentLanguage.value])
+
+const desktopRefs = ref([])
+const mobileRefs = ref({})
+let observer = null
+
+function setDesktopRef(el, index) {
+  if (el) desktopRefs.value[index] = el
+}
+
+function setMobileRef(el, id) {
+  if (el) mobileRefs.value[id] = el
+}
+
+function observeEl(el) {
+  if (el && observer) observer.observe(el)
+}
+
+function resetAndObserve() {
+  nextTick(() => {
+    desktopRefs.value.forEach(el => {
+      if (el) {
+        el.classList.remove('is-visible')
+        observer.observe(el)
+      }
+    })
+    Object.values(mobileRefs.value).forEach(el => {
+      if (el) {
+        el.classList.remove('is-visible')
+        observer.observe(el)
+      }
+    })
+  })
+}
+
+function createObserver() {
+  observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible')
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    { threshold: 0.12 }
+  )
+}
 
 const INITIAL = 3
 const BATCH = 3
@@ -317,31 +368,81 @@ const handleClickOutside = (e) => {
   }
 }
 
+watch(() => store.filteredCards, () => {
+  visibleCount.value = INITIAL
+  resetAndObserve()
+})
+
+watch(visibleMobileCards, async () => {
+  await nextTick()
+  Object.values(mobileRefs.value).forEach((el) => {
+    if (el && !el.classList.contains('is-visible')) observeEl(el)
+  })
+})
+
 onMounted(() => {
   document.addEventListener('click', handleClickOutside)
+  createObserver()
+  desktopRefs.value.forEach(observeEl)
+  Object.values(mobileRefs.value).forEach(observeEl)
+  requestAnimationFrame(() => {
+    isVisible.value = true
+  })
 })
 
 onUnmounted(() => {
   document.removeEventListener('click', handleClickOutside)
+  if (observer) observer.disconnect()
 })
 </script>
 
 <style scoped>
+.hero-title {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.hero-title.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.event-card {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+.event-card:nth-child(1) { transition-delay: 0s; }
+.event-card:nth-child(2) { transition-delay: 0.10s; }
+.event-card:nth-child(3) { transition-delay: 0.20s; }
+.event-card:nth-child(4) { transition-delay: 0.30s; }
+.event-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-event-card {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.mobile-event-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .card-enter-active,
 .card-leave-active {
   transition: all 300ms ease;
 }
-
 .card-enter-from {
   opacity: 0;
   transform: translateY(10px);
 }
-
 .card-leave-to {
   opacity: 0;
   transform: translateY(-10px);
 }
-
 .card-move {
   transition: transform 300ms ease;
 }
