@@ -68,7 +68,7 @@
             </div>
 
             <div class="relative flex items-center">
-              <input v-model="store.searchQuery" type="text" class="w-67.75 h-7.5 bg-white border border-black focus:outline-none focus:border-black-70 rounded" :placeholder="t.EventsSearchPlaceholder">
+              <input v-model="store.searchQuery" type="text" class="w-67.75 h-7.5 bg-white border border-black focus:outline-none focus:border-black-70 rounded">
               <button @click="updateSearch" class="absolute right-2.5 text-orange hover:text-orange/70 transition-colors duration-150">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="11" cy="11" r="8"/>
