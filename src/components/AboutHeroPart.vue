@@ -6,7 +6,7 @@
         >
             <span class="text-orange">{{t.AboutHeroText.charAt(0)}}</span>{{ t.AboutHeroText.slice(1) }}
         </h1>
-        <p class="col-start-1 lg:col-end-8 col-end-10 text-base md:text-lg font-[raleway] font-base pt-7.5">{{ t.AboutText }}</p>
+        <p class="col-start-1 lg:col-end-8 col-end-10 text-lg md:text-2xl font-[raleway] font-bold pt-7.5">{{ t.AboutText }}</p>
     </div>
 </template>
 
