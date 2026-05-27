@@ -10,7 +10,7 @@ import NewsLetterPart from '@/components/NewsLetterPart.vue';
   <main>
     <div class="px-20 max-md:px-8 max-sm:px-2.5">
       <NewsheroPart />
-      <div class="mt-8 sm:mt-16 lg:mt-66">
+      <div class="mt-5 sm:mt-12 lg:mt-52">
         <NewsfilterPart />
       </div>
       <NewsCards />

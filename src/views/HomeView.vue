@@ -12,7 +12,7 @@
   <main>
     <div class="px-20 max-md:px-8 max-sm:px-2.5">
       <HeroPart />
-      <div class="mt-16 md:mt-46 sm:mt-26 lg:mt-66">
+      <div class="mt-12 md:mt-26 sm:mt-14 lg:mt-44">
         <CardsPart />
       </div>
       <div class="mt-20 mb-20">

@@ -25,7 +25,9 @@ const closeMenu = () => {
       <div class="grid grid-cols-3 max-[874px]:grid-cols-2 items-center gap-2.5 w-full px-20 max-md:px-8 max-sm:px-2.5">
 
         <div class="flex justify-start items-center">
+          <RouterLink to="/" class="cursor-pointer">
           <img class="w-70 h-20 max-[874px]:min-h-10 max-[874px]:min-w-60 max-[874px]max-h-10 max-[874px]:max-w-60 md:pr-25 lg:pr-30 pr-20 pb-1" src="@/assets/logo1.svg" alt="Logo">
+          </RouterLink>
         </div>
 
         <div class="flex justify-center py-13.25 items-center max-[874px]:hidden">
