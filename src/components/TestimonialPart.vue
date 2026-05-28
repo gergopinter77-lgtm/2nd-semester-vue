@@ -8,7 +8,7 @@
 
             <div class="col-start-3 col-span-12 pt-22.75 pl-8 cols-span-2">
                 <div class="flex flex-row">
-                    <h4 class="text-white font-[Raleway] lg:text-xl md:text-base sm:text-sm text-sm w-85 name-item" :class="{ 'is-visible': isVisible }">
+                    <h4 class="text-white font-[Raleway] lg:text-xl md:text-base sm:text-sm text-sm sm:w-70 w-35 name-item" :class="{ 'is-visible': isVisible }">
                         Marlon Olvezecky <span class="font-light">- Creative User</span>
                     </h4>
                     <div class="flex flex-row col-span-2 stars-item" :class="{ 'is-visible': isVisible }">
@@ -22,7 +22,7 @@
                 <h5 class="text-lg lg:text-3xl md:text-2xl sm:text-xl text-white font-[raleway] italic mt-1 title-item" :class="{ 'is-visible': isVisible }">
                     The bridge we needed for our expansion!
                 </h5>
-                <p class="text-white font-[raleway] italic font-thin lg:w-152.5 md:w-120 sm:w-110 w-110 mt-1 body-item" :class="{ 'is-visible': isVisible }">
+                <p class="text-white font-[raleway] italic font-thin lg:w-152.5 md:w-120 sm:w-80 w-60 mt-1 body-item md:text-base text-sm" :class="{ 'is-visible': isVisible }">
                     Business DE-DK made entering the German market so much easier! The contacts, events, and insider knowledge we gained have saved us months of work and helped us build lasting partnerships across both countries.
                 </p>
             </div>
