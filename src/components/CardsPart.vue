@@ -1,5 +1,5 @@
 <template>
-    <div class="grid grid-cols-4 max-[1146px]:grid-cols-2 max-[390px]:grid-cols-1 gap-2.5" ref="gridRef">
+    <div class="grid grid-cols-4 max-[1146px]:grid-cols-2 max-[410px]:grid-cols-1 gap-2.5" ref="gridRef">
         <div
             v-for="(card, index) in cards"
             :key="card"
