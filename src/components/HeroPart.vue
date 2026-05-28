@@ -7,7 +7,7 @@
             <span class="text-orange">{{t.HomeHeroText.charAt(0)}}</span>{{ t.HomeHeroText.slice(1) }}
         </h1>
     </div>
-</template>
+</template> 
 
 <script setup>
 import { ref, onMounted, computed } from 'vue'
