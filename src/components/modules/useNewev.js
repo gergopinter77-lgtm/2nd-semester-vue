@@ -8,7 +8,6 @@ const newses = ref ([
       title: "Southern Denmark’s Supercomputer Boost",
       title_da: "Syd Danmarks Supercomputer Boost",
       title_de: "Süd Dänemarks Supercomputer Boost",
-      slug: 'tech-conference-2024',
     },
     {
       id: 2,
@@ -16,7 +15,6 @@ const newses = ref ([
       title: "Business Summit 2026",
       title_da: "Business Summit 2026",
       title_de: "Business Summit 2026",
-      slug: 'business-summit-2026',
     },
     {
       id: 3,
@@ -24,7 +22,6 @@ const newses = ref ([
       title: "Tech Conference 2026",
       title_da: "Tech Konference 2026",
       title_de: "Tech Konferenz 2026",
-      slug: 'tech-conference-2026',
     },
     {
       id: 4,
@@ -32,7 +29,6 @@ const newses = ref ([
       title: "Germany’s Business Pressure Grows",
       title_da: "Tysklands forretningspres vokser",
       title_de: "Der Druck auf die deutsche Wirtschaft wächst",
-      slug: "germany-business-pressure-grows",
     }
 ]);
 

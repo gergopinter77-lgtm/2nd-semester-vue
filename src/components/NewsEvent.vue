@@ -10,7 +10,7 @@
       <img :src="news.image" alt="" class="w-full h-full object-cover rounded-lg text-white group-hover:scale-105 transition-transform duration-500"/>
       <div class="absolute inset-0 bg-blue/60 rounded-lg"></div>
       <RouterLink
-        to="`news`"
+        to="/news"
         class="absolute bottom-6 left-7 right-4 text-2xl font-[raleway] font-semibold text-white text-shadow-lg group-hover:text-orange transition-colors duration-200"
       >
         <span class="text-orange">{{ (news[`title_${currentLanguage}`] || news.title).charAt(0) }}</span>{{ (news[`title_${currentLanguage}`] || news.title).slice(1) }}
