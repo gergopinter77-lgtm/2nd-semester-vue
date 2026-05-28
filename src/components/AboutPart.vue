@@ -27,8 +27,8 @@
                 <div class="pl-10 min-h-48">
                     <Transition name="fade" mode="out-in">
                         <div :key="activeIndex">
-                            <p class="font-[raleway] text-2xl font-bold mb-4 text-blue">{{ active[`title_${currentLanguage}`] || active.title }}</p>
-                            <p class="text-md leading-7 text-blue/50 font-light">{{ active[`body_${currentLanguage}`] || active.body }}</p>
+                            <p class="font-[raleway] md:text-2xl sm:text-xl text-lg font-bold mb-4 text-blue">{{ active[`title_${currentLanguage}`] || active.title }}</p>
+                            <p class="text-md leading-7 md:text-lg sm:text-md text-sm text-blue/50 font-light">{{ active[`body_${currentLanguage}`] || active.body }}</p>
                         </div>
                     </Transition>
                 </div>
