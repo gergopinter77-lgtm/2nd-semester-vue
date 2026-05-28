@@ -20,13 +20,13 @@ const closeMenu = () => {
 
 <template>
   <div class="min-h-screen overflow-x-hidden max-[874px]:pt-5 relative">
-    <div class="hero-background"></div>
+    <div class="hero-background" rel="preload" as="image"></div>
     <header class="w-full relative z-10">
       <div class="grid grid-cols-3 max-[874px]:grid-cols-2 items-center gap-2.5 w-full px-20 max-md:px-8 max-sm:px-2.5">
 
         <div class="flex justify-start items-center">
           <RouterLink to="/" class="cursor-pointer">
-          <img class="w-70 h-20 max-[874px]:min-h-10 max-[874px]:min-w-60 max-[874px]max-h-10 max-[874px]:max-w-60 md:pr-25 lg:pr-30 pr-20 pb-1" src="@/assets/logo1.svg" alt="Logo">
+          <img class="w-70 h-20 max-[874px]:min-h-10 max-[874px]:min-w-60 max-[874px]max-h-10 max-[874px]:max-w-60 md:pr-25 lg:pr-30 pr-20 pb-1" src="@/assets/logo1.svg" alt="Logo" fetchpriority="high">
           </RouterLink>
         </div>
 
@@ -86,7 +86,7 @@ const closeMenu = () => {
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 text-white font-[raleway]">
         <div class="flex flex-col items-center md:items-start gap-4 md:gap-0 md:justify-between text-center md:text-left">
           <a href="https://interreg.eu/" class="hover:opacity-70">
-          <img class="w-48 md:w-60" src="@/assets/Logo-Interreg.png" alt="Interreg logo">
+          <img class="w-48 md:w-60" src="@/assets/Logo-Interreg.webp" alt="Interreg logo">
           </a>
           <p class="text-sm">© 2026 Business Region <br> All Rights Reserved</p>
         </div>
