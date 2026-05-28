@@ -1,9 +1,9 @@
 export const translations = {
     en: {
-        HomeHeroText: 'Working Cross Border Was Never This Easy Before',
+        HomeHeroText: 'Working cross border was never this easy before',
         HomeNewsEventText: 'What\'s happening right now in the world of business',
         HomeMediaText: 'Some memories from our past events',
-        NewsHero: 'Stay Updated on everything that’s happening in the world of business',
+        NewsHero: 'Stay updated on everything that’s happening in the world of business',
         News: 'News',
         whatsnew:'what’s happening',
         medias: 'Media Channel',

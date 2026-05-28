@@ -4,7 +4,7 @@ export const useCards = () => {
     const cards = ref ([
         {
             id: 1,
-            text: "Find The Perfect Opportunity At Our Events",
+            text: "Find the perfect opportunity at our events",
             text_da: "Find den perfekte mulighed ved vores events",
             text_de: "Finden Sie die perfekte Gelegenheit bei unseren Veranstaltungen",
             number: 22,
@@ -18,7 +18,7 @@ export const useCards = () => {
         },
         {
             id: 2,
-            text: "What Is Happening In The Profesioanal World Today",
+            text: "What is happening in the Professional world today",
             text_da: "Hvad sker der i den professionelle verden i dag",
             text_de: "Was passiert heute in der professionellen Welt",
             number: 55,
@@ -32,7 +32,7 @@ export const useCards = () => {
         },
         {
             id: 3,
-            text: "Connect With Big Companies And Other Profesionals",
+            text: "Connect with big companies and other professionals",
             text_da: "Forbind med store virksomheder og andre fagfolk",
             text_de: "Verbinden Sie sich mit großen Unternehmen und anderen Fachleuten",
             number: 40,
@@ -46,7 +46,7 @@ export const useCards = () => {
         },
         {
             id: 4,
-            text: "Upload Your Cv And Wait For The Opportunities",
+            text: "Upload your cv and wait for the opportunities",
             text_da: "Upload dit CV og vent på mulighederne",
             text_de: "Laden Sie Ihren Lebenslauf hoch und warten Sie auf die Möglichkeiten",
             number: 90,

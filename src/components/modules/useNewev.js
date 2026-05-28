@@ -5,22 +5,34 @@ const newses = ref ([
     {
       id: 1,
       image: "https://i.imgur.com/AXmyIBs.jpeg",  
-      text: "Lorem ipsum dolor sit amet consectetur.",
+      title: "Southern Denmark’s Supercomputer Boost",
+      title_da: "Syd Danmarks Supercomputer Boost",
+      title_de: "Süd Dänemarks Supercomputer Boost",
+      slug: 'tech-conference-2024',
     },
     {
       id: 2,
       image: "https://i.imgur.com/a8vTGvb.jpeg",  
-      text: "Lorem ipsum dolor sit amet consectetur.",
+      title: "Business Summit 2026",
+      title_da: "Business Summit 2026",
+      title_de: "Business Summit 2026",
+      slug: 'business-summit-2026',
     },
     {
       id: 3,
-      image: "https://i.imgur.com/gCVYFp2.jpeg",  
-      text: "Lorem ipsum dolor sit amet consectetur.",
+      image: "https://i.imgur.com/a8vTGvb.jpeg",  
+      title: "Tech Conference 2026",
+      title_da: "Tech Konference 2026",
+      title_de: "Tech Konferenz 2026",
+      slug: 'tech-conference-2026',
     },
     {
       id: 4,
       image: "https://i.imgur.com/Trlf3Lb.jpeg",  
-      text: "Lorem ipsum dolor sit amet consectetur.",
+      title: "Germany’s Business Pressure Grows",
+      title_da: "Tysklands forretningspres vokser",
+      title_de: "Der Druck auf die deutsche Wirtschaft wächst",
+      slug: "germany-business-pressure-grows",
     }
 ]);
 

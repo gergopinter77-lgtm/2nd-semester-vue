@@ -2,12 +2,12 @@ import { ref, computed } from 'vue'
 
 const items = [
   {
-    label: 'What Do We Do?',
-    label_da: 'Hvad Gør Vi?',
-    label_de: 'Was Tun Wir?',
-    title: 'What Do We Do?',
-    title_da: 'Hvad Gør Vi?',
-    title_de: 'Was Tun Wir?',
+    label: 'What do we do?',
+    label_da: 'Hvad gør vi?',
+    label_de: 'Was tun wir?',
+    title: 'What do we do?',
+    title_da: 'Hvad gør vi?',
+    title_de: 'Was tun wir?',
     body: 'We help people and businesses build stronger cross-border careers and companies between Denmark and Germany. Our work covers talent attraction, onboarding, retention, commuting, relocation, and support for people working across the border. We also help with cross-border business, export to Germany, and practical guidance for employees, employers, and companies operating in the Danish-German border region.',
     body_da: 'Vi hjælper mennesker og virksomheder med at opbygge stærkere grænseoverskridende karrierer og virksomheder mellem Danmark og Tyskland. Vores arbejde dækker talenttiltrækning, onboarding, fastholdelse, pendling, relocation og support til personer, der arbejder på tværs af grænsen. Vi hjælper også med grænseoverskridende forretning, eksport til Tyskland og praktisk vejledning for medarbejdere, arbejdsgivere og virksomheder, der opererer i det dansk-tyske grænseområde.',
     body_de: 'Wir helfen Menschen und Unternehmen dabei, stärkere grenzüberschreitende Karrieren und Unternehmen zwischen Dänemark und Deutschland aufzubauen. Unsere Arbeit umfasst Talentgewinnung, Onboarding, Retention, Pendeln, Relocation und Unterstützung für Menschen, die grenzüberschreitend arbeiten. Wir helfen auch bei grenzüberschreitendem Geschäft, Export nach Deutschland und praktischer Anleitung für Mitarbeiter, Arbeitgeber und Unternehmen, die in der deutsch-dänischen Grenzregion tätig sind.',

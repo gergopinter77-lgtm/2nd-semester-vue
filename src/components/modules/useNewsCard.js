@@ -5,9 +5,9 @@ const newsCards = ref ([
     {
       id: 1,
       image: "https://i.imgur.com/AXmyIBs.jpeg",  
-      title: "Southern Denmark’s Supercomputer Boost",
-      title_da: "Syd Danmarks Supercomputer Boost",
-      title_de: "Süd Dänemarks Supercomputer Boost",
+      title: "Southern Denmark’s supercomputer boost",
+      title_da: "Syd Danmarks supercomputer boost",
+      title_de: "Süd Dänemarks supercomputer boost",
       description: "Southern Denmark is making a notable push in advanced computing with the launch of a new AI supercomputer in Sønderborg. The system gives researchers significantly more processing power for data-heavy work such as artificial intelligence, simulation, and complex analysis, which can support both academic research and industrial innovation. The project is especially relevant for business readers because it reflects how regional institutions and major companies like Danfoss are investing in digital infrastructure that can improve competitiveness, energy efficiency, and product development. It also strengthens Southern Denmark’s position as a region where research and industry are closely linked.",
       description_da: "Syd Danmark gør en bemærkelsesværdig indsats inden for avanceret databehandling med lanceringen af en ny AI-supercomputer i Sønderborg. Systemet giver forskere betydeligt mere processorkraft til dataintensive opgaver som kunstig intelligens, simulering og kompleks analyse, hvilket kan støtte både akademisk forskning og industriel innovation. Projektet er især relevant for erhvervslæsere, fordi det afspejler, hvordan regionale institutioner og store virksomheder som Danfoss investerer i digital infrastruktur, der kan forbedre konkurrenceevnen, energieffektiviteten og produktudviklingen. Det styrker også Syd Danmarks position som en region, hvor forskning og industri er tæt forbundet.",
       description_de: "Süd Dänemark macht einen bemerkenswerten Vorstoß im Bereich der Hochleistungsrechner mit der Einführung eines neuen KI-Supercomputers in Sønderborg. Das System bietet Forschern erheblich mehr Rechenleistung für datenintensive Arbeiten wie künstliche Intelligenz, Simulationen und komplexe Analysen, was sowohl die akademische Forschung als auch die industrielle Innovation unterstützen kann. Das Projekt ist besonders relevant für Geschäftsleser, da es zeigt, wie regionale Institutionen und große Unternehmen wie Danfoss in digitale Infrastruktur investieren, die die Wettbewerbsfähigkeit, Energieeffizienz und Produktentwicklung verbessern kann. Es stärkt auch Süd Dänemarks Position als eine Region, in der Forschung und Industrie eng verbunden sind.",
@@ -19,7 +19,7 @@ const newsCards = ref ([
     {
       id: 2,
       image: "https://i.imgur.com/a8vTGvb.jpeg",  
-      title: "Germany’s Business Pressure Grows",
+      title: "Germany’s business pressure grows",
       title_da: "Tysklands forretningspres vokser",
       title_de: "Der Druck auf die deutsche Wirtschaft wächst",
       description: "Germany’s business community is continuing to pressure Berlin for faster and more credible economic reforms. The core complaint is that companies are still facing too much uncertainty, high operating costs, and too little momentum on issues such as energy policy, digitalization, tax reform, and labor market flexibility. For a business audience, this story matters because it signals that confidence in Europe’s largest economy remains fragile, even as companies try to plan investment and hiring decisions. The broader message is that the private sector wants the government to act quickly before weak growth becomes more entrenched.",
@@ -33,9 +33,9 @@ const newsCards = ref ([
     {
       id: 3,
       image: "https://i.imgur.com/gCVYFp2.jpeg",  
-      title: "Odense Health Innovation Day",
-      title_da: "Odense Sundhedsinnovationsdag",
-      title_de: "Odense Gesundheitsinnovationsdag",
+      title: "Odense health innovation day",
+      title_da: "Odense sundhedsinnovationsdag",
+      title_de: "Odense gesundheitsinnovationsdag",
       description: "Health Innovation Day 2026 at SDU in Odense is shaping up as an important meeting point for researchers, healthcare professionals, companies, and public-sector partners. The event’s focus is on turning health research into practical solutions, which makes it especially relevant for businesses working in medtech, diagnostics, digital health, and life sciences. It also reflects a broader regional effort to connect universities and industry more effectively so that ideas move faster from concept to implementation. For a business site, the most important angle is the opportunity: this is where partnerships, funding, and commercialization can begin to take shape.",
       description_da: "Sundhedsinnovationsdagen 2026 ved SDU i Odense er under udvikling til et vigtigt mødested for forskere, sundhedsfaglige professionelle, virksomheder og offentlige partnere. Fokus for begivenheden er at omvandele sundhedsforskning til praktiske løsninger, hvilket gør den særligt relevant for virksomheder, der arbejder inden for medtech, diagnostik, digital sundhed og livsvitenskab. Det reflekterer også et bredere regionalt initiativ til at forbinde universiteter og industrien mere effektivt, så ideer bevæger sig hurtigere fra koncept til implementering. For en business hjemmeside er den vigtigste vinkel muligheden: dette er stedet, hvor partnerskaber, finansiering og kommercialisering kan begynde at forme sig.",
       description_de: "Die Gesundheitsinnovationsdag 2026 an der SDU in Odense entwickelt sich zu einem wichtigen Treffpunkt für Forscher, Gesundheitsfachkräfte, Unternehmen und öffentliche Partner. Der Fokus des Events liegt darauf, Gesundheitsforschung in praktische Lösungen umzuwandeln, was sie besonders relevant für Unternehmen macht, die in Medtech, Diagnostik, digitale Gesundheit und Lebenswissenschaften tätig sind. Sie reflektiert auch einen breiteren regionalen Aufwand, um Universitäten und Industrie effektiver zu verbinden, damit Ideen schneller von Konzept zu Umsetzung gelangen. Für eine Geschäftsseite ist der wichtigste Aspekt die Gelegenheit: Hier können Partnerschaften, Finanzierung und Kommerzialisierung beginnen, sich zu formen.",
@@ -47,7 +47,7 @@ const newsCards = ref ([
     {
       id: 4,
       image: "https://i.imgur.com/Trlf3Lb.jpeg",  
-      title: "Western Germany’s Political Shift",
+      title: "Western Germany’s political shift",
       title_da: "Tysklands politiske skift",
       title_de: "Der politische Wandel in Westdeutschland",
       description: "The recent state election in Rhineland-Palatinate showed a clear shift in western German politics, with the CDU emerging as the strongest party and the AfD recording its best result in the region so far. That outcome is politically important because western Germany has often been seen as more stable and less vulnerable to the extreme right than some eastern states. The result suggests that economic frustration, migration debates, and dissatisfaction with the status quo are reshaping voter behavior in a major industrial region. For businesses, this kind of change matters because political momentum can affect regulation, labor policy, infrastructure spending, and the overall investment climate.",
@@ -61,7 +61,7 @@ const newsCards = ref ([
     {
       id: 5,
       image: "https://i.imgur.com/Trlf3Lb.jpeg",  
-      title: "SDU Adds Football Research Star",
+      title: "SDU adds football research star",
       title_da: "SDU tilføjer fodboldforskningsstjerne",
       title_de: "SDU holt Fußball-Forschungsstar",
       description: "Southern Denmark’s University of Southern Denmark has strengthened its research profile by appointing Chris Carling, a leading football researcher, to deepen its work in sports science and performance analysis. This is more than a symbolic hire: it points to a growing trend in which universities combine academic research with practical applications in elite sports, analytics, and physical performance. For companies and institutions, the story is relevant because it shows how research talent can feed into innovation ecosystems beyond the lab, including data analysis, training technology, and performance optimization. It also helps position SDU as a competitive research institution with international appeal.",
@@ -75,7 +75,7 @@ const newsCards = ref ([
     {
       id: 6,
       image: "https://i.imgur.com/Trlf3Lb.jpeg",  
-      title: "Western Germany’s Political Shift",
+      title: "Western germany’s political shift",
       title_da: "Tysklands politiske skift",
       title_de: "Der politische Wandel in Westdeutschland",
       description: "The recent state election in Rhineland-Palatinate showed a clear shift in western German politics, with the CDU emerging as the strongest party and the AfD recording its best result in the region so far. That outcome is politically important because western Germany has often been seen as more stable and less vulnerable to the extreme right than some eastern states. The result suggests that economic frustration, migration debates, and dissatisfaction with the status quo are reshaping voter behavior in a major industrial region. For businesses, this kind of change matters because political momentum can affect regulation, labor policy, infrastructure spending, and the overall investment climate.",
@@ -89,7 +89,7 @@ const newsCards = ref ([
     {
       id: 7,
       image: "https://i.imgur.com/Trlf3Lb.jpeg",  
-      title: "SDU Boosts Football Research",
+      title: "SDU boosts football research",
       title_da: "SDU styrker fodboldforskning",
       title_de: "SDU verstärkt Fußball-Forschung",
       description: "SDU’s decision to bring in Chris Carling, an internationally recognized football researcher, signals a stronger emphasis on data-driven sports performance. Modern football increasingly depends on analytics, biomechanics, recovery science, and evidence-based training, so this appointment fits a wider industry shift toward measurable performance gains. From a business perspective, the story matters because sports science is becoming a commercial field with links to software, wearable technology, coaching systems, and elite athlete development. It also gives SDU a sharper profile in a sector where research can quickly translate into practical value.",
@@ -103,7 +103,7 @@ const newsCards = ref ([
     {
       id: 8,
       image: "https://i.imgur.com/Trlf3Lb.jpeg",  
-      title: "Tønder Festival Stays Strong",
+      title: "Tønder festival stays strong",
       title_da: "Tønder Festival forbliver stærk",
       title_de: "Tønder Festival bleibt stark",
       description: "Tønder Festival remains one of Southern Denmark’s most recognisable cultural events, and its continuing presence matters well beyond music fans. Festivals like this support hotels, restaurants, transport, retail, and local tourism, while also helping shape the region’s identity and visibility. For a business audience, the story is interesting because cultural events are not just entertainment; they are part of the local economy and can have a real effect on foot traffic and seasonal spending. Tønder also helps Southern Denmark maintain a strong cultural brand that can attract visitors and reinforce regional appeal.",
