@@ -60,7 +60,7 @@ const newsCards = ref ([
     },
     {
       id: 5,
-      image: "https://i.imgur.com/Trlf3Lb.jpeg",  
+      image: "https://i.imgur.com/arEQlcZ.jpeg",  
       title: "SDU adds football research star",
       title_da: "SDU tilføjer fodboldforskningsstjerne",
       title_de: "SDU holt Fußball-Forschungsstar",
@@ -74,7 +74,7 @@ const newsCards = ref ([
     },
     {
       id: 6,
-      image: "https://i.imgur.com/Trlf3Lb.jpeg",  
+      image: "https://i.imgur.com/UWOw0Qf.jpeg",  
       title: "Western germany’s political shift",
       title_da: "Tysklands politiske skift",
       title_de: "Der politische Wandel in Westdeutschland",
@@ -88,7 +88,7 @@ const newsCards = ref ([
     },
     {
       id: 7,
-      image: "https://i.imgur.com/Trlf3Lb.jpeg",  
+      image: "https://i.imgur.com/ve2hD6q.jpeg",  
       title: "SDU boosts football research",
       title_da: "SDU styrker fodboldforskning",
       title_de: "SDU verstärkt Fußball-Forschung",
@@ -102,7 +102,7 @@ const newsCards = ref ([
     },
     {
       id: 8,
-      image: "https://i.imgur.com/Trlf3Lb.jpeg",  
+      image: "https://i.imgur.com/KH3VHVg.jpeg",  
       title: "Tønder festival stays strong",
       title_da: "Tønder Festival forbliver stærk",
       title_de: "Tønder Festival bleibt stark",
