@@ -35,8 +35,8 @@ export const translations = {
         EventsClearAll: 'Clear all',
         EventsSearchPlaceholder: 'Search events...',
         EventsNoResults: 'No events found matching your criteria.',
-        mediahero: 'Cross Border Media Channel',
-        mediaherotext: 'Wellcome to our cross border media channel, where you can view our recent articles and videos, feel free to explore',
+        mediahero: 'Cross-Border Business Media Channel',
+        mediaherotext: 'Wellcome to our cross-border business media channel, where you can view our recent articles and videos, feel free to explore',
         readmore: 'read more',
 
     },
@@ -76,8 +76,8 @@ export const translations = {
         EventsClearAll: 'Ryd alt',
         EventsSearchPlaceholder: 'Søg efter begivenheder...',
         EventsNoResults: 'Ingen begivenheder fundet, der matcher dine kriterier.',
-        mediahero: 'Cross Border Media Channel',
-        mediaherotext: 'Velkommen til vores grænseoverskridende mediekanal, hvor du kan se vores seneste artikler og videoer, er du velkommen til at udforske',
+        mediahero: 'Grænseoverskridende erhvervsmediekanal',
+        mediaherotext: 'Velkommen til vores grænseoverskridende erhvervsmediekanal, hvor du kan se vores seneste artikler og videoer, er du velkommen til at udforske',
         readmore: 'læs mere',
     },
     de: {
@@ -116,8 +116,8 @@ export const translations = {
         EventsClearAll: 'Alle löschen',
         EventsSearchPlaceholder: 'Veranstaltungen suchen...',
         EventsNoResults: 'Keine Veranstaltungen gefunden, die Ihren Kriterien entsprechen.',
-        mediahero: 'Grenzüberschreitender Medienkanal',
-        mediaherotext: 'Willkommen auf unserem grenzüberschreitenden Medienkanal, wo Sie unsere neuesten Artikel und Videos ansehen und erkunden können',
+        mediahero: 'Grænseoverskridende erhvervsmediekanal',
+        mediaherotext: 'Willkommen auf unserem grenzüberschreitenden Business-Medienkanal, wo Sie unsere neuesten Artikel und Videos ansehen und erkunden können',
         readmore: 'mehr lesen',
     }
 }

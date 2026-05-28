@@ -4,8 +4,8 @@ export const useMediaNews = () => {
     const News = ref ([
         {
             id: 1,
-            text: "How to start a business in Denmark as an expat",
-            text_da: "Sådan starter du en virksomhed i Danmark som expat",
+            text: "How to start a business in the southern border region",
+            text_da: "So gründen Sie ein Unternehmen in der südlichen Grenzregion",
             text_de: "Wie man als Expat ein Unternehmen in Dänemark gründet",
             img: "https://i.imgur.com/hkGX3B8.jpeg"
         },
@@ -18,16 +18,16 @@ export const useMediaNews = () => {
         },
         {
             id: 3,
-            text: "Meet Katja Rosenburg",
-            text_da: "Mød Katja Rosenburg",
-            text_de: "Treffen Sie Katja Rosenburg",
+            text: "German companies in Denmark",
+            text_da: "Tyske virksomheder I danmark",
+            text_de: "Deutsche Unternehmen in Dänemark",
             img: "https://i.imgur.com/mInKMIb.jpeg"
         },
         {
             id: 4,
-            text: "Initiator of entrepreneurship",
-            text_da: "Initiativtager til iværksætteri",
-            text_de: "Initiator des Unternehmertums",
+            text: "Cross-border commuter",
+            text_da: "Grænsependler",
+            text_de: "Grenzgänger",
             img: "https://i.imgur.com/PqQe8gd.jpeg"
         },
     ]);

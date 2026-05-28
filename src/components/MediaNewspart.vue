@@ -11,7 +11,7 @@
                 class="col-span-1 w-full h-120 rounded-lg relative overflow-hidden hidden lg:block ">
                     <img :src="media.img" alt="media image" class="w-full h-full object-cover rounded-lg">
                     <div class="absolute inset-0 bg-blue/50 rounded-xl"></div>
-                    <p class="absolute top-5 pl-7 text-white text-2xl font-bold">{{ media[`text_${currentLanguage}`] || media.text }}</p>
+                    <p class="absolute top-5 px-7 text-white text-2xl font-bold">{{ media[`text_${currentLanguage}`] || media.text }}</p>
                     <RouterLink to="/news" class="absolute bottom-5 right-1 lg:mx-7 sm:mx-4 mx-2 flex flex-cols bg-white rounded-2xl font-bold md:w-40 md:hover:w-44 w-34 hover:w-38 px-2 justify-center transition-all duration-300 overflow-hidden">
                         <h1 class="uppercase text-blue md:text-xl text-base font-bold md:pt-0.75 pt-1.25  whitespace-nowrap">{{ t.readmore.slice(0) }}</h1>
                         <div class="relative justify-center 4.5 md:h-9 w-4.5 h-9">
