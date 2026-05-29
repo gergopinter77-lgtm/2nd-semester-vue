@@ -7,8 +7,8 @@
             <div class="flex flex-row justify-end w-screen gap-2">
             <div class="flex items-center gap-4">
                 <div class="relative" ref="filterRef">
-                    <button @click="toggleFilter" class="flex items-center lg:text-2xl md:text-xl sm:text-lg text-base max-md:hidden gap-2 text-blue font-medium uppercase tracking-widest" :class="{ 'opacity-70': filterOpen }">
-                        <span>Filter</span>
+                    <button @click="toggleFilter" class="flex items-center lg:text-2xl md:text-xl sm:text-lg text-base gap-2 text-blue font-medium uppercase tracking-widest" :class="{ 'opacity-70': filterOpen }">
+                        <span class="max-md:hidden">Filter</span>
                             <svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mb-[0.1em]">
                                 <line x1="4" y1="6" x2="20" y2="6"/>
                                 <line x1="4" y1="12" x2="20" y2="12"/>
@@ -50,7 +50,7 @@
                     <input
                         v-model="store.searchQuery"
                         type="text"
-                        class="lg:w-67.75 lg:h-7.5 md:h-6 md:w-60 h-6 w-50 bg-white border border-black focus:outline-none focus:border-black-70 rounded"
+                        class="w-32 sm:w-40 lg:h-7.5 md:h-6 md:w-60 h-6 bg-white border border-black focus:outline-none focus:border-black-70 rounded"
                     >
                     <button
                         class="absolute right-2.5 text-orange hover:text-orange/70 transition-colors duration-150"
