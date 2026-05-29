@@ -1,7 +1,7 @@
 <template>
     <div class="news-header py-4 font-[raleway]">
         <div class="flex items-center">
-            <h1 class="text-blue lg:text-4xl md:text-3xl sm:text-2xl text-xl font-bold uppercase">
+            <h1 class="text-blue lg:text-4xl md:text-3xl sm:text-2xl text-xl font-bold uppercase whitespace-nowrap">
                 {{ t.medias }}
             </h1>
             <div class="flex flex-row justify-end w-screen gap-2">
