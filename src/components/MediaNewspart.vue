@@ -1,14 +1,16 @@
 <template>
-    <div class="">
-        <div class="lg:px-5 px-2 py-7">
+    <div>
+        <div class="py-7">
             <h1 class=" lg:text-4xl text-3xl flex uppercase text-blue font-bold ">{{t.whatsnew.slice(0) }}</h1>
         </div>
         <div class="flex flex-col pb-10">
             <div class="grid lg:grid-cols-4 grid-cols-1 gap-4 rounded-lg overflow-hidden ">
-                <div  v-for="media in News"
+                <div  v-for="(media, index) in News"
                 :key="media.id"
                 :ref="el => setCardRef(el, index)"
-                class="col-span-1 w-full h-120 rounded-lg relative overflow-hidden hidden lg:block ">
+                :style="{ transitionDelay: `${index * 0.15}s` }"
+                :class="{ 'is-visible': visibleMedias[index] }"
+                class="card-item col-span-1 w-full h-120 rounded-lg relative overflow-hidden hidden lg:block ">
                     <img :src="media.img" alt="media image" class="w-full h-full object-cover rounded-lg">
                     <div class="absolute inset-0 bg-blue/50 rounded-xl"></div>
                     <p class="absolute top-5 px-7 text-white text-2xl font-bold">{{ media[`text_${currentLanguage}`] || media.text }}</p>
@@ -21,14 +23,16 @@
                     </RouterLink>
                 </div>
             </div>
-            <div class="rounded-lg overflow-hidden relative ">
+            <div ref="gridRef" class="rounded-lg overflow-hidden relative ">
               <div
               class="flex transition-transform duration-300 ease-in-out"
               :style="{ transform: `translateX(-${activeIndex * 100}%)` }"
               >
-                <div  v-for="media in News"
+                <div  v-for="(media, index) in News"
                 :key="media.id"
-                class="overflow-hidden lg:hidden block  w-full span-1 rounded-lg h-96 relative shrink-0"
+                :style="{ transitionDelay: `${index * 0.15}s` }"
+                :class="{ 'is-visible': visibleMedias[index] }"
+                class=" card-item overflow-hidden lg:hidden block  w-full span-1 rounded-lg h-96 relative shrink-0"
                 >
                     <img :src="media.img" alt="media image" class="w-full h-full object-cover rounded-lg">
                     <div class="absolute inset-0 bg-blue/50 rounded-xl"></div>
@@ -58,7 +62,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount, computed} from 'vue';
+import { ref, onMounted, computed} from 'vue';
 import { useMediaNews, } from './modules/useMediaNews';
 import { translations } from './modules/translations'
 import { useLanguage } from './modules/useLanguage'
@@ -68,8 +72,10 @@ const t = computed(() => translations[currentLanguage.value])
 
 const { News } = useMediaNews();
 
+const gridRef = ref(null)
 const activeIndex = ref(0);
 const cardRefs = ref([]);
+const visibleMedias = ref([]);
 let observer = null;
 
 function setCardRef(el, index) {
@@ -85,28 +91,42 @@ function next() {
 }
 
 onMounted(() => {
-  observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.15 }
-  );
+    visibleMedias.value = new Array(News.value?.length ?? 0).fill(false)
 
-  cardRefs.value.forEach((card) => {
-    if (card) observer.observe(card);
-  });
-});
+    observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
 
-onBeforeUnmount(() => {
-  if (observer) observer.disconnect();
-});
+                    const cardEls = gridRef.value?.querySelectorAll('.card-item')
+                    cardEls?.forEach((el, i) => {
+                        setTimeout(() => {
+                            visibleMedias.value[i] = true
+                        }, i * 150)
+                    })
+
+                    observer.disconnect()
+                }
+            })
+        },
+        { threshold: 0.20 }
+    )
+
+    if (gridRef.value) {
+        observer.observe(gridRef.value)
+    }
+})
 </script>
 
 <style>
+.card-item {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
 
+.card-item.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 </style>

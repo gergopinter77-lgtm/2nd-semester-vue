@@ -1,3 +1,14 @@
+<template>
+    <div class="grid grid-cols-12 gap-2.5 pt-8 sm:py-20 md:py-27">
+        <div class="col-span-12 sm:col-start-1 sm:col-end-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl lg:text-6xl text-blue font-semibold font-[raleway]"
+                :class="{ 'is-visible': isVisible }">
+                <span class="text-orange">{{ t.mediahero.charAt(0) }}</span>{{ t.mediahero.slice(1) }}
+            </h1>
+        </div>
+    </div>
+</template>
+
 <script setup>
 import { ref, onMounted, computed } from 'vue'
 import { translations } from './modules/translations'
@@ -15,17 +26,15 @@ onMounted(() => {
 })
 </script>
 
-<template>
-    <div class="md:min-h-100 min-h-60">
-        <div class="pt-20 ">
-            <h1 class="md:text-6xl text-3xl text-blue font-semibold font-[raleway]"><span class="text-orange">{{ t.mediahero.charAt(0) }}</span>{{ t.mediahero.slice(1) }}</h1>
-        </div>
-        <div class="my-10">
-            <p class="md:text-2xl text-base text-blue font-[raleway] font-semibold ">{{ t.mediaherotext.slice(0) }}</p>
-        </div>
-    </div>
-</template>
+<style scoped>
+h1 {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
 
-<style>
-
+    &.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 </style>

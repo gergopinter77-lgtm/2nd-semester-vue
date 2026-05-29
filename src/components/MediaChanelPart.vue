@@ -5,7 +5,8 @@
       v-for="(media, index) in store.filteredmedias"
       :key="media.id"
       :style="{ transitionDelay: `${index * 0.15}s` }"
-      class="col-span-1 rounded-2xl overflow-hidden relative h-125 group hover:shadow-2xl transition-shadow duration-300"
+      :class="{ 'is-visible': visibleMedias[index] }"
+      class="card-item col-span-1 rounded-2xl overflow-hidden relative h-125 group hover:shadow-2xl transition-shadow duration-300"
     >
       <img :src="media.pictures" alt="" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
       <div class="absolute inset-0 bg-blue/60 rounded-lg"></div>
