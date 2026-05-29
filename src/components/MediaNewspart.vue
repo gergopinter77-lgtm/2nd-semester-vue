@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <div class="lg:pb-5 pb-2">
+    <div class="">
+        <div class="lg:px-5 px-2 py-7">
             <h1 class=" lg:text-4xl text-3xl flex uppercase text-blue font-bold ">{{t.whatsnew.slice(0) }}</h1>
         </div>
-        <div class="flex flex-col">
+        <div class="flex flex-col pb-10">
             <div class="grid lg:grid-cols-4 grid-cols-1 gap-4 rounded-lg overflow-hidden ">
                 <div  v-for="media in News"
                 :key="media.id"

@@ -59,7 +59,7 @@ export const translations = {
         AboutHeroText: 'Om os',
         AboutText: 'Mød ledere og specialister fra hele regionen. Del viden, opbyg professionelle relationer, og omsæt nye indsigter på tværs af brancher og roller. Platformen er støttet af Interreg, som fremmer grænseoverskridende samarbejde mellem Danmark og Tyskland. Vi understøtter samarbejde, videndeling og forretningsudvikling for at styrke vækst og innovation i grænseregionen.',
         networkTitle: 'Mød vores netværk af 26 partnere på tværs af grænsen',
-        networkSubtitle: 'Find førende danske og tyske virksomheder, der styrker det dansk-tysk erhvervssamarbejde. Udforsk partnere i grænseregion syd og forbind dig med tyske virksomheder i Danmark og danske virksomheder i Tyskland.', 
+        networkSubtitle: 'Find førende danske og tyske virksomheder, der styrker det dansk-tysk erhvervssamarbejde. Udforsk partnere i grænseregion syd og forbind dig med tyske virksomheder i Danmark og danske virksomheder i Tyskland.',
         networkHeading: 'Dansk-tyske partnere',
         filterAll: 'Alle',
         filterDenmark: 'Danmark',
@@ -116,7 +116,7 @@ export const translations = {
         EventsClearAll: 'Alle löschen',
         EventsSearchPlaceholder: 'Veranstaltungen suchen...',
         EventsNoResults: 'Keine Veranstaltungen gefunden, die Ihren Kriterien entsprechen.',
-        mediahero: 'Grænseoverskridende erhvervsmediekanal',
+        mediahero: 'Grenzüberschreitender Business-Medienkanal',
         mediaherotext: 'Willkommen auf unserem grenzüberschreitenden Business-Medienkanal, wo Sie unsere neuesten Artikel und Videos ansehen und erkunden können',
         readmore: 'mehr lesen',
     }

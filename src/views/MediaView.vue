@@ -7,19 +7,19 @@ import Mediafilter from '@/components/MediafilterPart.vue';
 </script>
 
 <template>
-    <div class="md:px-20 px-10">
+    <div class="px-20 max-md:px-8 max-sm:px-2.5">
         <MediaHeroPart />
     </div>
-    <div  class="md:px-20 px-10">
+    <div  class="px-20 max-md:px-8 max-sm:px-2.5">
         <Mediafilter />
     </div>
-    <div class="lg:px-20 md:px-10 px-5">
+    <div class="px-20 max-md:px-8 max-sm:px-2.5">
         <MediaChanelPart />
     </div>
-    <div class="my-10 lg:px-20 md:px-10 px-5">
+    <div class="px-20 max-md:px-8 max-sm:px-2.5">
         <NewsLetterPart />
     </div>
-    <div class="my-10 lg:px-20 md:px-10 px-5">
+    <div class="px-20 max-md:px-8 max-sm:px-2.5">
         <MediaNewspart />
     </div>
 
