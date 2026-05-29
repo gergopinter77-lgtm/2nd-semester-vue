@@ -3,7 +3,7 @@
         <div class="grid grid-cols-12 gap-2.5 px-20 max-md:px-8 max-sm:px-2.5">
 
             <div class="col-start-1 col-span-2 pt-11 avatar-item" :class="{ 'is-visible': isVisible }">
-                <img src="https://i.imgur.com/TmXKaUA.jpeg" alt="" class="lg:h-44.75 md:h-33.75 sm:h-22.75 lg:mt-0 mt-6 rounded-full">
+                <img src="https://i.imgur.com/TmXKaUA.jpeg" alt="" class="lg:h-44.75 md:h-33.75 sm:h-22.75 lg:mt-0 mt-6 rounded-full" style="aspect-ratio: 338/500">
             </div>
 
             <div class="col-start-3 col-span-12 pt-22.75 pl-8 cols-span-2">

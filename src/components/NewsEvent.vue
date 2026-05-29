@@ -7,7 +7,7 @@
       :ref="el => setCardRef(el, index)"
       class="news-card hidden md:block max-md:col-span-6 col-span-3 rounded-lg h-125 relative overflow-hidden group hover:shadow-2xl transition-shadow duration-300"
     >
-      <img :src="news.image" alt="" class="w-full h-full object-cover rounded-lg text-white group-hover:scale-105 transition-transform duration-500" fetchpriority="high" rel="preload" as="image"/>
+      <img :src="news.image" alt="" class="w-full h-full object-cover rounded-lg text-white group-hover:scale-105 transition-transform duration-500" style="aspect-ratio: 338/500"/>
       <div class="absolute inset-0 bg-blue/60 rounded-lg"></div>
       <RouterLink
         to="/news"

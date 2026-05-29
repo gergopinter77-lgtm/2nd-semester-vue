@@ -86,7 +86,7 @@ const closeMenu = () => {
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 text-white font-[raleway]">
         <div class="flex flex-col items-center md:items-start gap-4 md:gap-0 md:justify-between text-center md:text-left">
           <a href="https://interreg.eu/" class="hover:opacity-70">
-          <img class="w-48 md:w-60" src="@/assets/Logo-Interreg.webp" alt="Interreg logo" fetchpriority="high">
+          <img class="w-48 md:w-60" src="@/assets/Logo-Interreg.webp" alt="Interreg logo">
           </a>
           <p class="text-sm">© 2026 Business Region <br> All Rights Reserved</p>
         </div>
