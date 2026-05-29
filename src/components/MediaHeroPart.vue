@@ -16,7 +16,7 @@ onMounted(() => {
 </script>
 
 <template>
-    <div class="min-h-100">
+    <div class="md:min-h-100 min-h-60">
         <div class="pt-20 ">
             <h1 class="md:text-6xl text-3xl text-blue font-semibold font-[raleway]"><span class="text-orange">{{ t.mediahero.charAt(0) }}</span>{{ t.mediahero.slice(1) }}</h1>
         </div>
